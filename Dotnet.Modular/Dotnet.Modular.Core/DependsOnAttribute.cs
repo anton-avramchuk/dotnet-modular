@@ -1,6 +1,4 @@
-﻿using Crm.Core.Modularity.Abstractions;
-
-namespace Crm.Core.Modularity;
+﻿namespace Crm.Core.Modularity;
 
 /// <summary>
 /// Used to define dependencies of a type.
