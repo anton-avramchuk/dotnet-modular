@@ -1,4 +1,6 @@
-﻿namespace Crm.Core.Modularity;
+﻿using System;
+
+namespace Crm.Core.Modularity;
 
 /// <summary>
 /// Used to define dependencies of a type.

@@ -1,4 +1,7 @@
 ﻿using Dotnet.Modular.Core.Extensions.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Dotnet.Modular.Core.Extensions.Collections;
 

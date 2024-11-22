@@ -1,5 +1,6 @@
 ﻿using Dotnet.Modular.Core.Extensions.Collections;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 
 namespace Dotnet.Modular.Core
 {

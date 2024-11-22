@@ -1,5 +1,6 @@
 using Dotnet.Modular.Core.Logging;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Runtime.ExceptionServices;
 
 namespace Dotnet.Modular.Core.Extensions.Common;

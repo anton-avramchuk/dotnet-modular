@@ -1,4 +1,8 @@
-﻿namespace Dotnet.Modular.Core.Extensions.Collections;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Dotnet.Modular.Core.Extensions.Collections;
 
 /// <summary> 
 /// Extension methods for <see cref="IEnumerable{T}"/>.

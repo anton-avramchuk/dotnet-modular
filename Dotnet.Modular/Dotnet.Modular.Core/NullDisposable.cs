@@ -1,3 +1,5 @@
+using System;
+
 namespace Dotnet.Modular.Core;
 
 public sealed class NullDisposable : IDisposable

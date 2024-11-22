@@ -1,3 +1,5 @@
+using System;
+
 namespace Dotnet.Modular.Core.Extensions.Common;
 
 /// <summary>

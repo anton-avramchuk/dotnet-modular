@@ -1,4 +1,6 @@
-﻿namespace Crm.Core.Modularity;
+﻿using System;
+
+namespace Crm.Core.Modularity;
 
 public interface IDependedTypesProvider
 {

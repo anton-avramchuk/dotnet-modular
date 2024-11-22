@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace Dotnet.Modular.Core.Logging;
 

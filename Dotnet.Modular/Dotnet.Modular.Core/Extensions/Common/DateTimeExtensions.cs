@@ -1,4 +1,6 @@
-﻿namespace Dotnet.Modular.Core.Extensions.Common;
+﻿using System;
+
+namespace Dotnet.Modular.Core.Extensions.Common;
 
 /// <summary>
 /// Extension methods for the <see cref="DateTime"/>.

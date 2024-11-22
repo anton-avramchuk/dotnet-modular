@@ -1,5 +1,6 @@
 using Dotnet.Modular.Core.Extensions.Collections;
 using Dotnet.Modular.Core.Extensions.Common;
+using System;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
@@ -43,7 +44,7 @@ public static class StringExtensions
     /// <summary>
     /// Indicates whether this string is null or an System.String.Empty string.
     /// </summary>
-    public static bool IsNullOrEmpty([System.Diagnostics.CodeAnalysis.NotNullWhen(false)] this string? str)
+    public static bool IsNullOrEmpty(this string? str)
     {
         return string.IsNullOrEmpty(str);
     }
@@ -51,7 +52,7 @@ public static class StringExtensions
     /// <summary>
     /// indicates whether this string is null, empty, or consists only of white-space characters.
     /// </summary>
-    public static bool IsNullOrWhiteSpace([System.Diagnostics.CodeAnalysis.NotNullWhen(false)] this string? str)
+    public static bool IsNullOrWhiteSpace(this string? str)
     {
         return string.IsNullOrWhiteSpace(str);
     }

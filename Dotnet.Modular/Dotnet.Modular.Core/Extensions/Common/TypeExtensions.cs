@@ -1,4 +1,7 @@
-﻿namespace Dotnet.Modular.Core.Extensions.Common;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Dotnet.Modular.Core.Extensions.Common;
 
 public static class TypeExtensions
 {
