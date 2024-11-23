@@ -4,10 +4,10 @@ namespace Dotnet.Modular.Core
 {
     public interface IModule
     {
-        string Name { get; }
+        //string Name { get; }
 
-        Task ConfigureServicesAsync(ServiceConfigurationContext context);
+        //Task ConfigureServicesAsync(ServiceConfigurationContext context);
 
-        void ConfigureServices(ServiceConfigurationContext context);
+        //void ConfigureServices(ServiceConfigurationContext context);
     }
 }

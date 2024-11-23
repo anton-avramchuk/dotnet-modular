@@ -16,7 +16,13 @@ namespace Dotnet.Modular.Test.Console.Modules
 
     public class ModuleC : ModuleBase
     {
+        public ModuleC(string test)
+        {
+            Test = test;
+        }
         public override string Name => nameof(ModuleC);
+
+        public string Test { get; }
     }
 
 
