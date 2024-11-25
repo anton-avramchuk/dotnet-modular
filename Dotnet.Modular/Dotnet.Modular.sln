@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Core", "Dotn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console", "Dotnet.Modular.Test.Console\Dotnet.Modular.Test.Console.csproj", "{406DCC88-6090-43FE-8652-A5E31D112B47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Core.Generators", "Dotnet.Modular.Core.Generators\Dotnet.Modular.Core.Generators.csproj", "{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console.Modules", "Dotnet.Modular.Test.Console.Modules\Dotnet.Modular.Test.Console.Modules.csproj", "{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

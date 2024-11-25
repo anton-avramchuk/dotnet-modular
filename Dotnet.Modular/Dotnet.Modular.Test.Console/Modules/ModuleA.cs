@@ -8,7 +8,7 @@ namespace Dotnet.Modular.Test.Console.Modules
     {
         public override string Name => nameof(ModuleA);
     }
-    [DependsOn(typeof(ModuleC))]
+    [DependsOn(typeof(ModuleC), typeof(TestModule))]
     public class ModuleB : ModuleBase
     {
         public override string Name => nameof(ModuleB);

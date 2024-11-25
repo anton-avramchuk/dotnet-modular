@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Dotnet.Modular.Core.Generators.DependencyTreeGenerator": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
+    }
+  }
+}
