@@ -85,10 +85,11 @@ namespace Dotnet.Modular.Core.Generators
 
         private static void GenerateBootstrapCode(SourceProductionContext context, INamedTypeSymbol classSymbol)
         {
-            // Создаём код для файла InitApp.g.cs
+            // Создаём код для файла Boostraper.g.cs
             var code = $@"
                 using System.Collections.Generic;
                 using Microsoft.Extensions.DependencyInjection;
+                using Dotnet.Modular.Core.Extensions.DependencyInjection;
 
                 namespace {classSymbol.ContainingNamespace}
                 {{
@@ -96,7 +97,7 @@ namespace Dotnet.Modular.Core.Generators
                     {{
                         public static void Start(this IServiceCollection services)
                         {{
-                            services.StartApplication<{classSymbol.ToDisplayString()}>();
+                            services.AddApplication<{classSymbol.ToDisplayString()}>();
                         }}
                     }}
                 }}";
@@ -110,9 +111,9 @@ namespace Dotnet.Modular.Core.Generators
             // Создаём диагностическое сообщение об ошибке
             var diagnostic = Diagnostic.Create(new DiagnosticDescriptor(
                 id: "BOOTSTRAPGEN001",
-                title: "Ошибка генерации Bootstrapper",
+                title: "Ошибка генерации Bootstrapper ",
                 messageFormat: message,
-                category: "BootstrapperGenerator",
+                category: nameof(BootstraperGenerator),
                 DiagnosticSeverity.Error,
                 isEnabledByDefault: true),
                 Location.None);
