@@ -66,9 +66,9 @@ namespace Dotnet.Modular.Core.Generators
             if (classSymbol is null)
                 return null;
 
-            if (classSymbol.AllInterfaces.Any(i => i.ToDisplayString() == ModuleTypeName))
+            if (!classSymbol.AllInterfaces.Any(i => i.ToDisplayString() == ModuleTypeName))
             {
-                return classSymbol;
+                return null;
             }
 
             // Проверяем наличие атрибута BootstrapperAttribute

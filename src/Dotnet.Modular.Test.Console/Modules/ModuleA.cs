@@ -27,7 +27,7 @@ namespace Dotnet.Modular.Test.Console.Modules
 
 
     [DependsOn(typeof(ModuleA), typeof(ModuleC))]
-    [Bootstraper]
+   // [Bootstraper]
     public class BootstraperModule : ModuleBase
     {
         public override string Name => nameof(BootstraperModule);
