@@ -90,7 +90,7 @@ namespace Dotnet.Modular.Core.Generators
                 using Microsoft.Extensions.DependencyInjection;
                 using Dotnet.Modular.Core.Extensions.DependencyInjection;
 
-                namespace {classSymbol.ContainingNamespace}
+                namespace {classSymbol.ContainingAssembly.Name}
                 {{
                     public static class Bootstrap
                     {{
@@ -102,7 +102,7 @@ namespace Dotnet.Modular.Core.Generators
                 }}";
 
             // Добавляем сгенерированный код
-            context.AddSource("InitApp.g.cs", SourceText.From(code, Encoding.UTF8));
+            context.AddSource("Boostraper.g.cs", SourceText.From(code, Encoding.UTF8));
         }
 
         private static void ReportError(SourceProductionContext context, string message)
