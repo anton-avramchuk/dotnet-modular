@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Crm.Core.Modularity;
+namespace Dotnet.Modular.Core;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public class BootstraperAttribute : Attribute

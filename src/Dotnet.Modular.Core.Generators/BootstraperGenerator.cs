@@ -1,5 +1,4 @@
-﻿using Crm.Core.Modularity;
-using Microsoft.CodeAnalysis;
+﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 using System;
 using System.Collections.Generic;
@@ -103,7 +102,7 @@ namespace Dotnet.Modular.Core.Generators
                 }}";
 
             // Добавляем сгенерированный код
-            context.AddSource("Boostraper.g.cs", SourceText.From(code, Encoding.UTF8));
+            context.AddSource("InitApp.g.cs", SourceText.From(code, Encoding.UTF8));
         }
 
         private static void ReportError(SourceProductionContext context, string message)
