@@ -10,9 +10,7 @@ namespace Dotnet.Modular.Core.Generators
     [Generator]
     public class BootstraperGenerator : IIncrementalGenerator
     {
-        private static string BoostraperAttribiteName=typeof(BootstraperAttribute).FullName;
-
-        private static string ModuleTypeName = typeof(IModule).FullName;
+        
 
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
@@ -65,7 +63,7 @@ namespace Dotnet.Modular.Core.Generators
             if (classSymbol is null)
                 return null;
 
-            if (!classSymbol.AllInterfaces.Any(i => i.ToDisplayString() == ModuleTypeName))
+            if (!classSymbol.AllInterfaces.Any(i => i.ToDisplayString() == Constants.ModuleTypeName))
             {
                 return null;
             }
@@ -73,7 +71,7 @@ namespace Dotnet.Modular.Core.Generators
             // Проверяем наличие атрибута BootstrapperAttribute
             foreach (var attribute in classSymbol.GetAttributes())
             {
-                if (attribute.AttributeClass?.ToDisplayString() == BoostraperAttribiteName)
+                if (attribute.AttributeClass?.ToDisplayString() == Constants.BoostraperAttribiteName)
                 {
                     return classSymbol;
                 }
