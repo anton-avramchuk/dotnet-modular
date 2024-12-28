@@ -8,6 +8,10 @@
     "Dotnet.Modular.Core.Generators.BootstraperGenerator": {
       "commandName": "DebugRoslynComponent",
       "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
+    },
+    "Dotnet.Modular.Core.Generators.ModuleServicesGenerator": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
     }
   }
 }
