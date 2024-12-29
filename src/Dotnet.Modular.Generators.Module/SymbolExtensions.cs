@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Collections.Immutable;
 using System.Linq;
 
-namespace Dotnet.Modular.Core.Generators
+namespace Dotnet.Modular.Generators.Module
 {
     public static class SymbolExtensions
     {
@@ -56,7 +56,7 @@ namespace Dotnet.Modular.Core.Generators
 
     public static class SourceProductionContextExtensions
     {
-        public static void AddError(this SourceProductionContext context, string code,string message,string category)
+        public static void AddError(this SourceProductionContext context, string code, string message, string category)
         {
             var diagnostic = Diagnostic.Create(new DiagnosticDescriptor(
                 id: code,

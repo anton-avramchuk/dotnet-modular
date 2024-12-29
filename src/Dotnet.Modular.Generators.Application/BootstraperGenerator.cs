@@ -1,11 +1,10 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using Dotnet.Modular.Generators.Core;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Dotnet.Modular.Core.Generators
+namespace Dotnet.Modular.Generators.Application
 {
     [Generator]
     public class BootstraperGenerator : IIncrementalGenerator

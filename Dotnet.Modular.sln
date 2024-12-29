@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Core", "src\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj", "{EF821BE0-87AA-4124-8D70-C44DA64F7A5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console", "src\Dotnet.Modular.Test.Console\Dotnet.Modular.Test.Console.csproj", "{406DCC88-6090-43FE-8652-A5E31D112B47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Core.Generators", "src\Dotnet.Modular.Core.Generators\Dotnet.Modular.Core.Generators.csproj", "{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console.Modules", "src\Dotnet.Modular.Test.Console.Modules\Dotnet.Modular.Test.Console.Modules.csproj", "{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Generators.Application", "src\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj", "{AFDD9875-FF77-46FF-B46B-7F922384370E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Generators.Core", "src\Dotnet.Modular.Generators.Core\Dotnet.Modular.Generators.Core.csproj", "{3AE7CB85-406F-4DF3-92E1-9C65C122954F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Generators.Module", "src\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj", "{129CE5F6-3156-47C0-9F00-6A580CF7F06B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +29,22 @@ Global
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{657BB69A-0DE7-4D8F-9D9D-DEE838C5FCC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE7CB85-406F-4DF3-92E1-9C65C122954F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE7CB85-406F-4DF3-92E1-9C65C122954F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE7CB85-406F-4DF3-92E1-9C65C122954F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE7CB85-406F-4DF3-92E1-9C65C122954F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129CE5F6-3156-47C0-9F00-6A580CF7F06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129CE5F6-3156-47C0-9F00-6A580CF7F06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129CE5F6-3156-47C0-9F00-6A580CF7F06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129CE5F6-3156-47C0-9F00-6A580CF7F06B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
