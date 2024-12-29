@@ -1,12 +1,13 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using Dotnet.Modular.Core;
+using Dotnet.Modular.Generators.Core;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
 using System;
-using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 
-namespace Dotnet.Modular.Core.Generators
+namespace Dotnet.Modular.Generators.Module
 {
     [Generator]
     public class ModuleServicesGenerator : IIncrementalGenerator

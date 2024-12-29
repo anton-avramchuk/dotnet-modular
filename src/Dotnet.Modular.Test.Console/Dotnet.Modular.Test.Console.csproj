@@ -14,7 +14,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Dotnet.Modular.Core.Generators\Dotnet.Modular.Core.Generators.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 		<ProjectReference Include="..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
 		<ProjectReference Include="..\Dotnet.Modular.Test.Console.Modules\Dotnet.Modular.Test.Console.Modules.csproj" />
 	</ItemGroup>

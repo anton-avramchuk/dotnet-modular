@@ -1,6 +1,8 @@
-﻿namespace Dotnet.Modular.Core.Generators
+﻿using Dotnet.Modular.Core;
+
+namespace Dotnet.Modular.Generators.Core
 {
-    internal static class Constants
+    public static class Constants
     {
         public static string BoostraperAttribiteName = typeof(BootstraperAttribute).FullName;
 

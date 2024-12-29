@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+		<IsRoslynComponent>true</IsRoslynComponent>
+		<LangVersion>10.0</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.12.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\Dotnet.Modular.Core\BootstraperAttribute.cs" Link="Common\BootstraperAttribute.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\ExportAttribute.cs" Link="Common\ExportAttribute.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\Extensions\Collections\DictionaryExtensions.cs" Link="Common\DictionaryExtensions.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\IModule.cs" Link="Common\IModule.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\ServiceConfigurationContext.cs" Link="Common\ServiceConfigurationContext.cs" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<Compile Include="..\Dotnet.Modular.Generators.Core\Constants.cs" Link="Constants.cs" />
+		<Compile Include="..\Dotnet.Modular.Generators.Core\ExternalInit.cs" Link="ExternalInit.cs" />
+	</ItemGroup>
+
+</Project>
