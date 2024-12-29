@@ -6,7 +6,7 @@ namespace Crm.Core.Modularity;
 /// Used to define dependencies of a type.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-public class DependsOnAttribute : Attribute, IDependedTypesProvider
+public class DependsOnAttribute : Attribute
 {
     public Type[] DependedTypes { get; }
 
