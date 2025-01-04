@@ -25,7 +25,7 @@ namespace Dotnet.Modular.Test.Console.Modules
     {
         public override string Name => "TestModule3";
     }
-
+    [DependsOn(typeof(TestModule3))]
     public class TestModule4 : ModuleBase
     {
         public override string Name => "TestModule4";

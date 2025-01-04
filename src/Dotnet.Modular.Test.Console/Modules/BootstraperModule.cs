@@ -13,7 +13,7 @@ namespace Dotnet.Modular.Test.Console.Modules
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            RegisterServices(context.Services);
+            //RegisterServices(context.Services);
         }
     }
 

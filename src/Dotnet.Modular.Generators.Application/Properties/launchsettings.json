@@ -4,10 +4,6 @@
     "Dotnet.Modular.Generators.Application.BootstraperGenerator": {
       "commandName": "DebugRoslynComponent",
       "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
-    },
-    "Dotnet.Modular.Generators.Application.ModuleDependencyGenerator": {
-      "commandName": "DebugRoslynComponent",
-      "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
     }
   }
 }
