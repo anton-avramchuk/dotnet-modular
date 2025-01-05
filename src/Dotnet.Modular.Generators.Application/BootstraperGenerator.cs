@@ -320,11 +320,13 @@ namespace Dotnet.Modular.Generators.Application
             code.AppendLine("        public static void InitializeModules()");
             code.AppendLine("        {");
 
+            code.AppendLine($"            Dotnet.Modular.Core.ModuleInitializer.AddModule<Dotnet.Modular.Modules.Core.CoreModule>();");
+
             foreach (var module in sortedModules)
             {
                 code.AppendLine($"            Dotnet.Modular.Core.ModuleInitializer.AddModule<{module.ToDisplayString()}>();");
             }
-
+            
             code.AppendLine("        }");
             code.AppendLine("    }");
             code.AppendLine("}");
