@@ -18,6 +18,7 @@
 		<ProjectReference Include="..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 		<ProjectReference Include="..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
 		<ProjectReference Include="..\Dotnet.Modular.Test.Console.Modules\Dotnet.Modular.Test.Console.Modules.csproj" />
+		<ProjectReference Include="..\modules\Dotnet.Modular.Modules.Core\Dotnet.Modular.Modules.Core.csproj" />
 	</ItemGroup>
 
 </Project>
