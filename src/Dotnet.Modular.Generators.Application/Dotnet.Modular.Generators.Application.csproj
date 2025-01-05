@@ -24,6 +24,7 @@
 		<Compile Include="..\Dotnet.Modular.Core\Extensions\Collections\DictionaryExtensions.cs" Link="Common\DictionaryExtensions.cs" />
 		<Compile Include="..\Dotnet.Modular.Core\IModule.cs" Link="Common\IModule.cs" />
 		<Compile Include="..\Dotnet.Modular.Core\ServiceConfigurationContext.cs" Link="Common\ServiceConfigurationContext.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\DependsOnAttribute.cs" Link="Common\DependsOnAttribute.cs" />
 	</ItemGroup>
 
 

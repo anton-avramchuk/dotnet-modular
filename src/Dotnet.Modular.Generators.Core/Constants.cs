@@ -1,4 +1,5 @@
-﻿using Dotnet.Modular.Core;
+﻿using Crm.Core.Modularity;
+using Dotnet.Modular.Core;
 
 namespace Dotnet.Modular.Generators.Core
 {
@@ -9,5 +10,8 @@ namespace Dotnet.Modular.Generators.Core
         public static string ModuleTypeName = typeof(IModule).FullName;
 
         public static string ExportAttributeName=typeof(ExportAttribute).FullName;
+
+
+        public static string DependsOnAttributeName = typeof(DependsOnAttribute).FullName;
     }
 }
