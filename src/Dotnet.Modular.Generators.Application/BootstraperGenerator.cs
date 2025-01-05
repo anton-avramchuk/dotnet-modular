@@ -58,11 +58,41 @@ namespace Dotnet.Modular.Generators.Application
                     return;
                 }
 
-                //var dependencyGraph = BuildDependencyGraph(modules);
+                var sortedModules = TopologicalSort(dependencies, bootstrapper);
 
-                // Генерируем код для единственного класса
-                GenerateBootstrapCode(context, bootstrapModules[0]);
+
+                GenerateBootstrapCode(context, bootstrapper);
+                GenerateInitializationCode(context, sortedModules, bootstrapper);
             });
+        }
+
+
+
+        private static List<INamedTypeSymbol> TopologicalSort(Dictionary<INamedTypeSymbol, INamedTypeSymbol[]> graph, INamedTypeSymbol startNode)
+        {
+            var sorted = new List<INamedTypeSymbol>();
+            var visited = new HashSet<INamedTypeSymbol>(SymbolEqualityComparer.Default);
+
+            void Visit(INamedTypeSymbol node)
+            {
+                if (visited.Contains(node))
+                    return;
+
+                visited.Add(node);
+
+                if (graph.ContainsKey(node))
+                {
+                    foreach (var neighbor in graph[node])
+                    {
+                        Visit(neighbor);
+                    }
+                }
+
+                sorted.Add(node);
+            }
+
+            Visit(startNode);
+            return sorted;
         }
 
         private static bool HasCircularDependency(Dictionary<INamedTypeSymbol, INamedTypeSymbol[]> graph, out List<string> cycle)
@@ -112,7 +142,7 @@ namespace Dotnet.Modular.Generators.Application
 
         private static void FillDependencies(Dictionary<INamedTypeSymbol, INamedTypeSymbol[]> deps, INamedTypeSymbol symbol)
         {
-            
+
 
             if (deps.ContainsKey(symbol))
                 return;
@@ -266,6 +296,7 @@ namespace Dotnet.Modular.Generators.Application
                     {{
                         public static void Start(this IServiceCollection services)
                         {{
+                            {classSymbol.ContainingAssembly.Name}.ModuleInitializer.InitializeModules();
                             services.AddApplication<{classSymbol.ToDisplayString()}>();
                         }}
                     }}
@@ -273,6 +304,32 @@ namespace Dotnet.Modular.Generators.Application
 
             // Добавляем сгенерированный код
             context.AddSource("Boostraper.g.cs", SourceText.From(code, Encoding.UTF8));
+        }
+
+
+        private static void GenerateInitializationCode(SourceProductionContext context, List<INamedTypeSymbol> sortedModules, INamedTypeSymbol root)
+        {
+            var code = new StringBuilder();
+
+            code.AppendLine("using Microsoft.Extensions.DependencyInjection;");
+            code.AppendLine();
+            code.AppendLine($"namespace {root.ContainingAssembly.Name}");
+            code.AppendLine("{");
+            code.AppendLine("    public static class ModuleInitializer");
+            code.AppendLine("    {");
+            code.AppendLine("        public static void InitializeModules()");
+            code.AppendLine("        {");
+
+            foreach (var module in sortedModules)
+            {
+                code.AppendLine($"            Dotnet.Modular.Core.ModuleInitializer.AddModule<{module.ToDisplayString()}>();");
+            }
+
+            code.AppendLine("        }");
+            code.AppendLine("    }");
+            code.AppendLine("}");
+
+            context.AddSource("ModuleInitializer.g.cs", SourceText.From(code.ToString(), Encoding.UTF8));
         }
 
         private static void ReportError(SourceProductionContext context, string message)
