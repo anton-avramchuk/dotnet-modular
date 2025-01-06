@@ -1,5 +1,4 @@
-﻿using Crm.Core.Modularity;
-using Dotnet.Modular.Core;
+﻿using Dotnet.Modular.Core;
 using Dotnet.Modular.Modules.Blazor.Components.Core;
 
 namespace Dotnet.Modular.Modules.Blazor.Components.Bootstrap
@@ -9,7 +8,7 @@ namespace Dotnet.Modular.Modules.Blazor.Components.Bootstrap
     {
         public void ConfigureServices(ServiceConfigurationContext context)
         {
-            throw new NotImplementedException();
+            RegisterServices(context.Services);
         }
     }
 }

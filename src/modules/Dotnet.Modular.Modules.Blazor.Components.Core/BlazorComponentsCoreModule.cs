@@ -6,6 +6,6 @@ public partial class BlazorComponentsCoreModule : IModule
 {
     public void ConfigureServices(ServiceConfigurationContext context)
     {
-        throw new NotImplementedException();
+        RegisterServices(context.Services);
     }
 }

@@ -1,10 +1,11 @@
 ﻿using Dotnet.Modular.Core;
-using IModule = Dotnet.Modular.Core.IModule;
+using Dotnet.Modular.Modules.Blazor.Components.Bootstrap;
 
 namespace Dotnet.Modular.Blazor.Server.App
 {
 
     [Bootstraper]
+    [DependsOn(typeof(BlazorComponentsBootstrapModule))]
     public partial class AppBoostrapper : IModule
     {
         public AppBoostrapper()
