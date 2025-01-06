@@ -80,7 +80,7 @@ public static class CrmApplicationFactory
     }
 
     public static ICrmApplicationWithExternalServiceProvider Create<TStartupModule>(
-         IServiceCollection services,
+        IServiceCollection services,
         Action<CrmApplicationCreationOptions>? optionsAction = null)
         where TStartupModule : IModule
     {
@@ -92,7 +92,9 @@ public static class CrmApplicationFactory
          IServiceCollection services,
         Action<CrmApplicationCreationOptions>? optionsAction = null)
     {
-        throw new NotImplementedException();
-        //return new CrmApplicationWithExternalServiceProvider(startupModuleType, services, optionsAction);
+        
+        return new CrmApplicationWithExternalServiceProvider(startupModuleType, services, optionsAction);
     }
+
+   
 }

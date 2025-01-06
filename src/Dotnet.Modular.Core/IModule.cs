@@ -1,5 +1,4 @@
-﻿
-namespace Dotnet.Modular.Core
+﻿namespace Dotnet.Modular.Core
 {
     public interface IModule
     {

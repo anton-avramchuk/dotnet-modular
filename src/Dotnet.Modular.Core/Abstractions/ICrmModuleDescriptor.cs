@@ -1,6 +1,4 @@
-﻿using Crm.Core.Modularity;
-using Dotnet.Modular.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
 
