@@ -103,7 +103,7 @@ namespace {moduleSymbol.ContainingNamespace}
 
                     if (exportedTypes.Length == 0)
                     {
-                        registrations.AppendLine($"            services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                        registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
                     }
                     else
                     {
@@ -112,11 +112,11 @@ namespace {moduleSymbol.ContainingNamespace}
                             var typeName = exportedType.Value?.ToString();
                             if (!string.IsNullOrEmpty(typeName))
                             {
-                                registrations.AppendLine($"            services.{registrationMethod}<{typeName}, {classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}<{typeName}, {classSymbol.ToDisplayString()}>();");
                             }
                             else
                             {
-                                registrations.AppendLine($"            services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
                             }
                         }
                     }
