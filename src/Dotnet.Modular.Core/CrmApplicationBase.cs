@@ -58,10 +58,7 @@ public abstract class CrmApplicationBase : ICrmApplication
 
         Modules = LoadModules(services, options);
 
-        if (!options.SkipConfigureServices)
-        {
-            ConfigureServices();
-        }
+        ConfigureServices();
     }
 
 

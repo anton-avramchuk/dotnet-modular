@@ -6,15 +6,15 @@ namespace Dotnet.Modular.Blazor.Server.App
 
     [Bootstraper]
     [DependsOn(typeof(BlazorComponentsBootstrapModule))]
-    public partial class AppBoostrapper : IModule
+    public partial class AppBoostrapper : ModuleBase
     {
         public AppBoostrapper()
         {
         }
 
-        public void ConfigureServices(ServiceConfigurationContext context)
+        public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            throw new NotImplementedException();
+            RegisterServices(context.Services);
         }
     }
 }

@@ -2,11 +2,11 @@
 
 namespace Dotnet.Modular.Modules.Core;
 
-public partial class CoreModule : IModule
+public partial class CoreModule : ModuleBase
 {
-    public string Name => nameof(CoreModule);
+    
 
-    public void ConfigureServices(ServiceConfigurationContext context)
+    public override void ConfigureServices(ServiceConfigurationContext context)
     {
         RegisterServices(context.Services);
     }

@@ -6,7 +6,7 @@ namespace Dotnet.Modular.Core
     {
         private ServiceConfigurationContext? _serviceConfigurationContext;
 
-        public abstract string Name { get; }
+        
 
         public virtual void ConfigureServices(ServiceConfigurationContext context)
         {

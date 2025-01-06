@@ -15,7 +15,7 @@ public class CrmApplicationCreationOptions
 
     // public ConfigurationBuilderOptions Configuration { get; }
 
-    public bool SkipConfigureServices { get; set; }
+    
 
     public string ApplicationName { get; set; }
 

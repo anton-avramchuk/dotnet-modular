@@ -4,9 +4,9 @@ using Dotnet.Modular.Modules.Blazor.Components.Core;
 namespace Dotnet.Modular.Modules.Blazor.Components.Bootstrap
 {
     [DependsOn(typeof(BlazorComponentsCoreModule))]
-    public partial class BlazorComponentsBootstrapModule : IModule
+    public partial class BlazorComponentsBootstrapModule : ModuleBase
     {
-        public void ConfigureServices(ServiceConfigurationContext context)
+        public override void ConfigureServices(ServiceConfigurationContext context)
         {
             RegisterServices(context.Services);
         }

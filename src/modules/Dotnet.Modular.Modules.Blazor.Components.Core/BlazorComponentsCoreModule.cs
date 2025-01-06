@@ -2,9 +2,10 @@
 
 namespace Dotnet.Modular.Modules.Blazor.Components.Core;
 
-public partial class BlazorComponentsCoreModule : IModule
+public partial class BlazorComponentsCoreModule : ModuleBase
 {
-    public void ConfigureServices(ServiceConfigurationContext context)
+
+    public override void ConfigureServices(ServiceConfigurationContext context)
     {
         RegisterServices(context.Services);
     }
