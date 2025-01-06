@@ -23,5 +23,14 @@
 		<Compile Include="..\Dotnet.Modular.Generators.Core\Constants.cs" Link="Constants.cs" />
 		<Compile Include="..\Dotnet.Modular.Generators.Core\ExternalInit.cs" Link="ExternalInit.cs" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\Dotnet.Modular.Core\BootstraperAttribute.cs" Link="Common\BootstraperAttribute.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\ExportAttribute.cs" Link="Common\ExportAttribute.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\Extensions\Collections\DictionaryExtensions.cs" Link="Common\DictionaryExtensions.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\IModule.cs" Link="Common\IModule.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\ServiceConfigurationContext.cs" Link="Common\ServiceConfigurationContext.cs" />
+		<Compile Include="..\Dotnet.Modular.Core\DependsOnAttribute.cs" Link="Common\DependsOnAttribute.cs" />
+	</ItemGroup>
 	
 </Project>

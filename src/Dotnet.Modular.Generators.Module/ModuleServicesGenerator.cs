@@ -89,14 +89,14 @@ namespace {moduleSymbol.ContainingNamespace}
             {
                 foreach (var attribute in classSymbol.GetAttributes().Where(a => a.AttributeClass?.ToDisplayString() == Constants.ExportAttributeName))
                 {
-                    var exportType = Convert.ToString(attribute.ConstructorArguments[0].Value);
+                    var exportType =(ExportType)attribute.ConstructorArguments[0].Value;
                     var exportedTypes = attribute.ConstructorArguments[1].Values;
 
                     var registrationMethod = exportType switch
                     {
-                        "Scope"=> "AddScoped",
-                        "Trancient" => "AddTransient",
-                        "Single" => "AddSingleton",
+                        ExportType.Scope => "AddScoped",
+                        ExportType.Trancient => "AddTransient",
+                        ExportType.Single => "AddSingleton",
                         _ => throw new NotImplementedException(),
                     };
 
