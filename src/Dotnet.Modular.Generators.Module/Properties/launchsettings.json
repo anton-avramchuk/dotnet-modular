@@ -3,7 +3,7 @@
   "profiles": {
     "Dotnet.Modular.Generators.Module.ModuleServicesGenerator": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "../Dotnet.Modular.Test.Console/Dotnet.Modular.Test.Console.csproj"
+      "targetProject": "../modules/Dotnet.Modular.Modules.Navigation/Dotnet.Modular.Modules.Navigation.csproj"
     }
   }
 }
