@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "applications", "application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Blazor.Server.App", "src\Dotnet.Modular.Blazor.Server.App\Dotnet.Modular.Blazor.Server.App.csproj", "{EC180D53-E49F-4C2D-BF31-62324FC07DC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components.Bootstrap", "src\modules\Dotnet.Modular.Modules.Blazor.Components.Bootstrap\Dotnet.Modular.Modules.Blazor.Components.Bootstrap.csproj", "{6947667B-42F7-4FD7-8F97-63BEE47C4D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components.Core", "src\modules\Dotnet.Modular.Modules.Blazor.Components.Core\Dotnet.Modular.Modules.Blazor.Components.Core.csproj", "{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +68,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0A34B599-82E3-4F7A-A173-5FFB639CF3FF} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{EC180D53-E49F-4C2D-BF31-62324FC07DC4} = {5D0366D0-F781-42A0-826F-38FD812B9FCD}
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 	EndGlobalSection
 EndGlobal

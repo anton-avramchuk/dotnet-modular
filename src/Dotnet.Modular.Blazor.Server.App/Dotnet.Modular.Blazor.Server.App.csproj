@@ -1,9 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
+		<ProjectReference Include="..\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj" />
+		<ProjectReference Include="..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+	</ItemGroup>
 
 </Project>
