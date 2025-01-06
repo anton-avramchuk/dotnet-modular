@@ -35,12 +35,12 @@ internal class CrmApplicationWithExternalServiceProvider : CrmApplicationBase, I
         SetServiceProvider(serviceProvider);
     }
 
-    public async Task InitializeAsync(IServiceProvider serviceProvider)
-    {
-        SetServiceProvider(serviceProvider);
+    //public async Task InitializeAsync(IServiceProvider serviceProvider)
+    //{
+    //    SetServiceProvider(serviceProvider);
 
-        await InitializeModulesAsync();
-    }
+    //    await InitializeModulesAsync();
+    //}
 
     public void Initialize(IServiceProvider serviceProvider)
     {

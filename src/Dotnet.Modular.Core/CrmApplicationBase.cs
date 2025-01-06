@@ -1,12 +1,14 @@
 ﻿using Dotnet.Modular.Core.Abstractions;
+using Dotnet.Modular.Core.Extensions.Common;
 using Dotnet.Modular.Core.Extensions.DependencyInjection;
 using Dotnet.Modular.Core.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace Dotnet.Modular.Core;
 
@@ -62,25 +64,6 @@ public abstract class CrmApplicationBase : ICrmApplication
         }
     }
 
-    public virtual async Task ShutdownAsync()
-    {
-        using (var scope = ServiceProvider.CreateScope())
-        {
-            await scope.ServiceProvider
-                .GetRequiredService<IModuleManager>()
-                .ShutdownModulesAsync(new ApplicationShutdownContext(scope.ServiceProvider));
-        }
-    }
-
-    public virtual void Shutdown()
-    {
-        using (var scope = ServiceProvider.CreateScope())
-        {
-            scope.ServiceProvider
-                .GetRequiredService<IModuleManager>()
-                .ShutdownModules(new ApplicationShutdownContext(scope.ServiceProvider));
-        }
-    }
 
     public virtual void Dispose()
     {
@@ -93,16 +76,6 @@ public abstract class CrmApplicationBase : ICrmApplication
         ServiceProvider.GetRequiredService<ObjectAccessor<IServiceProvider>>().Value = ServiceProvider;
     }
 
-    protected virtual async Task InitializeModulesAsync()
-    {
-        using (var scope = ServiceProvider.CreateScope())
-        {
-            WriteInitLogs(scope.ServiceProvider);
-            await scope.ServiceProvider
-                .GetRequiredService<IModuleManager>()
-                .InitializeModulesAsync(new ApplicationInitializationContext(scope.ServiceProvider));
-        }
-    }
 
     protected virtual void InitializeModules()
     {
@@ -143,96 +116,13 @@ public abstract class CrmApplicationBase : ICrmApplication
             );
     }
 
-    //TODO: We can extract a new class for this
-    public virtual async Task ConfigureServicesAsync()
-    {
-        CheckMultipleConfigureServices();
-
-        var context = new ServiceConfigurationContext(Services);
-        Services.AddSingleton(context);
-
-        foreach (var module in Modules)
-        {
-            if (module.Instance is CrmModule crmModule)
-            {
-                crmModule.ServiceConfigurationContext = context;
-            }
-        }
-
-        //PreConfigureServices
-        foreach (var module in Modules.Where(m => m.Instance is IPreConfigureServices))
-        {
-            try
-            {
-                await ((IPreConfigureServices)module.Instance).PreConfigureServicesAsync(context);
-            }
-            catch (Exception ex)
-            {
-                throw new CrmInitializationException($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
-            }
-        }
-
-        var assemblies = new HashSet<Assembly>();
-
-        //ConfigureServices
-        foreach (var module in Modules)
-        {
-            if (module.Instance is ModuleBase crmModule)
-            {
-                if (!crmModule.SkipAutoServiceRegistration)
-                {
-                    foreach (var assembly in module.AllAssemblies)
-                    {
-                        if (!assemblies.Contains(assembly))
-                        {
-                            Services.AddAssembly(assembly);
-                            assemblies.Add(assembly);
-                        }
-                    }
-                }
-            }
-
-            try
-            {
-                await module.Instance.ConfigureServicesAsync(context);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"An error occurred during {nameof(ICrmModule.ConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
-            }
-        }
-
-        //PostConfigureServices
-        foreach (var module in Modules.Where(m => m.Instance is IPostConfigureServices))
-        {
-            try
-            {
-                await ((IPostConfigureServices)module.Instance).PostConfigureServicesAsync(context);
-            }
-            catch (Exception ex)
-            {
-                throw new CrmInitializationException($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServicesAsync)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
-            }
-        }
-
-        foreach (var module in Modules)
-        {
-            if (module.Instance is CrmModule crmModule)
-            {
-                crmModule.ServiceConfigurationContext = null!;
-            }
-        }
-
-        _configuredServices = true;
-
-        TryToSetEnvironment(Services);
-    }
+    
 
     private void CheckMultipleConfigureServices()
     {
         if (_configuredServices)
         {
-            throw new CrmInitializationException("Services have already been configured! If you call ConfigureServicesAsync method, you must have set CrmApplicationCreationOptions.SkipConfigureServices to true before.");
+            throw new Exception("Services have already been configured! If you call ConfigureServicesAsync method, you must have set CrmApplicationCreationOptions.SkipConfigureServices to true before.");
         }
     }
 
@@ -246,7 +136,7 @@ public abstract class CrmApplicationBase : ICrmApplication
 
         foreach (var module in Modules)
         {
-            if (module.Instance is CrmModule crmModule)
+            if (module.Instance is ModuleBase crmModule)
             {
                 crmModule.ServiceConfigurationContext = context;
             }
@@ -261,7 +151,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new CrmInitializationException($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new Exception($"An error occurred during {nameof(IPreConfigureServices.PreConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -270,20 +160,17 @@ public abstract class CrmApplicationBase : ICrmApplication
         //ConfigureServices
         foreach (var module in Modules)
         {
-            if (module.Instance is CrmModule crmModule)
-            {
-                if (!crmModule.SkipAutoServiceRegistration)
-                {
-                    foreach (var assembly in module.AllAssemblies)
-                    {
-                        if (!assemblies.Contains(assembly))
-                        {
-                            Services.AddAssembly(assembly);
-                            assemblies.Add(assembly);
-                        }
-                    }
-                }
-            }
+            //if (module.Instance is ModuleBase crmModule)
+            //{
+            //    foreach (var assembly in module.AllAssemblies)
+            //    {
+            //        if (!assemblies.Contains(assembly))
+            //        {
+            //            Services.AddAssembly(assembly);
+            //            assemblies.Add(assembly);
+            //        }
+            //    }
+            //}
 
             try
             {
@@ -291,7 +178,7 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new CrmInitializationException($"An error occurred during {nameof(ICrmModule.ConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new Exception($"An error occurred during {nameof(IModule.ConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
@@ -304,13 +191,13 @@ public abstract class CrmApplicationBase : ICrmApplication
             }
             catch (Exception ex)
             {
-                throw new CrmInitializationException($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
+                throw new Exception($"An error occurred during {nameof(IPostConfigureServices.PostConfigureServices)} phase of the module {module.Type.AssemblyQualifiedName}. See the inner exception for details.", ex);
             }
         }
 
         foreach (var module in Modules)
         {
-            if (module.Instance is CrmModule crmModule)
+            if (module.Instance is ModuleBase crmModule)
             {
                 crmModule.ServiceConfigurationContext = null!;
             }

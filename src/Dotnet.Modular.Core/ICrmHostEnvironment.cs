@@ -4,3 +4,4 @@ public interface ICrmHostEnvironment
 {
     string EnvironmentName { get; set; }
 }
+

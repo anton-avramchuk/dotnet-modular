@@ -34,14 +34,15 @@ namespace Dotnet.Modular.Core
 
         public IReadOnlyList<Assembly> FindAll()
         {
-            var assemblies = new List<Assembly>();
+            throw new NotImplementedException();
+            //var assemblies = new List<Assembly>();
 
-            foreach (var module in _moduleContainer.Modules)
-            {
-                assemblies.AddRange(module.AllAssemblies);
-            }
+            //foreach (var module in _moduleContainer.Modules)
+            //{
+            //    assemblies.AddRange(module.AllAssemblies);
+            //}
 
-            return assemblies.Distinct().ToList();
+            //return assemblies.Distinct().ToList();
         }
     }
 
