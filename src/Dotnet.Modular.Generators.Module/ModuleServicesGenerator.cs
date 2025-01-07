@@ -89,12 +89,12 @@ namespace {moduleSymbol.ContainingNamespace}
             {
                 foreach (var attribute in classSymbol.GetAttributes().Where(a => a.AttributeClass?.ToDisplayString() == Constants.ExportAttributeName))
                 {
-                    var exportType = (ExportType)attribute.ConstructorArguments[0].Value;
+                    var exportType =(ExportType)attribute.ConstructorArguments[0].Value;
                     var exportedTypes = attribute.ConstructorArguments[1].Values;
 
                     var registrationMethod = exportType switch
                     {
-                        ExportType.Scope=> "AddScoped",
+                        ExportType.Scope => "AddScoped",
                         ExportType.Trancient => "AddTransient",
                         ExportType.Single => "AddSingleton",
                         _ => throw new NotImplementedException(),
@@ -103,7 +103,7 @@ namespace {moduleSymbol.ContainingNamespace}
 
                     if (exportedTypes.Length == 0)
                     {
-                        registrations.AppendLine($"            services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                        registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
                     }
                     else
                     {
@@ -112,11 +112,11 @@ namespace {moduleSymbol.ContainingNamespace}
                             var typeName = exportedType.Value?.ToString();
                             if (!string.IsNullOrEmpty(typeName))
                             {
-                                registrations.AppendLine($"            services.{registrationMethod}<{typeName}, {classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}<{typeName}, {classSymbol.ToDisplayString()}>();");
                             }
                             else
                             {
-                                registrations.AppendLine($"            services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
                             }
                         }
                     }

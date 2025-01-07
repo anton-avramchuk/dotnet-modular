@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Crm.Core.Modularity;
+namespace Dotnet.Modular.Core;
 
 /// <summary>
 /// Used to define dependencies of a type.

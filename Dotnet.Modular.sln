@@ -5,10 +5,6 @@ VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Core", "src\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj", "{EF821BE0-87AA-4124-8D70-C44DA64F7A5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console", "src\Dotnet.Modular.Test.Console\Dotnet.Modular.Test.Console.csproj", "{406DCC88-6090-43FE-8652-A5E31D112B47}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Test.Console.Modules", "src\Dotnet.Modular.Test.Console.Modules\Dotnet.Modular.Test.Console.Modules.csproj", "{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Generators.Application", "src\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj", "{AFDD9875-FF77-46FF-B46B-7F922384370E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Generators.Core", "src\Dotnet.Modular.Generators.Core\Dotnet.Modular.Generators.Core.csproj", "{3AE7CB85-406F-4DF3-92E1-9C65C122954F}"
@@ -18,6 +14,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Core", "src\modules\Dotnet.Modular.Modules.Core\Dotnet.Modular.Modules.Core.csproj", "{0A34B599-82E3-4F7A-A173-5FFB639CF3FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "applications", "applications", "{5D0366D0-F781-42A0-826F-38FD812B9FCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Blazor.Server.App", "src\Dotnet.Modular.Blazor.Server.App\Dotnet.Modular.Blazor.Server.App.csproj", "{EC180D53-E49F-4C2D-BF31-62324FC07DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components.Bootstrap", "src\modules\Dotnet.Modular.Modules.Blazor.Components.Bootstrap\Dotnet.Modular.Modules.Blazor.Components.Bootstrap.csproj", "{6947667B-42F7-4FD7-8F97-63BEE47C4D51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components.Core", "src\modules\Dotnet.Modular.Modules.Blazor.Components.Core\Dotnet.Modular.Modules.Blazor.Components.Core.csproj", "{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Navigation", "src\modules\Dotnet.Modular.Modules.Navigation\Dotnet.Modular.Modules.Navigation.csproj", "{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +35,6 @@ Global
 		{EF821BE0-87AA-4124-8D70-C44DA64F7A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF821BE0-87AA-4124-8D70-C44DA64F7A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF821BE0-87AA-4124-8D70-C44DA64F7A5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{406DCC88-6090-43FE-8652-A5E31D112B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{406DCC88-6090-43FE-8652-A5E31D112B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{406DCC88-6090-43FE-8652-A5E31D112B47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87A3DA78-BCC0-44FD-83EE-B96CE427DE8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFDD9875-FF77-46FF-B46B-7F922384370E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,11 +51,31 @@ Global
 		{0A34B599-82E3-4F7A-A173-5FFB639CF3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A34B599-82E3-4F7A-A173-5FFB639CF3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A34B599-82E3-4F7A-A173-5FFB639CF3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC180D53-E49F-4C2D-BF31-62324FC07DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0A34B599-82E3-4F7A-A173-5FFB639CF3FF} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{EC180D53-E49F-4C2D-BF31-62324FC07DC4} = {5D0366D0-F781-42A0-826F-38FD812B9FCD}
+		{6947667B-42F7-4FD7-8F97-63BEE47C4D51} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{AAEA8CC3-B6BC-450E-97D5-0BE9DD217EB4} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{57B49D5D-993D-4B4B-9A8E-AFFE1FA8E29B} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 	EndGlobalSection
 EndGlobal

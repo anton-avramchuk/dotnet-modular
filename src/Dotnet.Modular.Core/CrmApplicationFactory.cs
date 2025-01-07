@@ -1,68 +1,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Threading.Tasks;
 
 namespace Dotnet.Modular.Core;
 
 public static class CrmApplicationFactory
 {
-    public async static Task<ICrmApplicationWithInternalServiceProvider> CreateAsync<TStartupModule>(
-        Action<CrmApplicationCreationOptions>? optionsAction = null)
-        where TStartupModule : IModule
-    {
-        var app = Create(typeof(TStartupModule), options =>
-        {
-            options.SkipConfigureServices = true;
-            optionsAction?.Invoke(options);
-        });
-        await app.ConfigureServicesAsync();
-        return app;
-    }
-
-    public async static Task<ICrmApplicationWithInternalServiceProvider> CreateAsync(
-         Type startupModuleType,
-        Action<CrmApplicationCreationOptions>? optionsAction = null)
-    {
-        throw new NotImplementedException();
-
-        //var app = new CrmApplicationWithInternalServiceProvider(startupModuleType, options =>
-        //{
-        //    options.SkipConfigureServices = true;
-        //    optionsAction?.Invoke(options);
-        //});
-        //await app.ConfigureServicesAsync();
-        //return app;
-    }
-
-    public async static Task<ICrmApplicationWithExternalServiceProvider> CreateAsync<TStartupModule>(
-         IServiceCollection services,
-        Action<CrmApplicationCreationOptions>? optionsAction = null)
-        where TStartupModule : IModule
-    {
-        var app = Create(typeof(TStartupModule), services, options =>
-        {
-            options.SkipConfigureServices = true;
-            optionsAction?.Invoke(options);
-        });
-        await app.ConfigureServicesAsync();
-        return app;
-    }
-
-    public async static Task<ICrmApplicationWithExternalServiceProvider> CreateAsync(
-         Type startupModuleType,
-         IServiceCollection services,
-        Action<CrmApplicationCreationOptions>? optionsAction = null)
-    {
-
-        throw new NotImplementedException();
-        //var app = new CrmApplicationWithExternalServiceProvider(startupModuleType, services, options =>
-        //{
-        //    options.SkipConfigureServices = true;
-        //    optionsAction?.Invoke(options);
-        //});
-        //await app.ConfigureServicesAsync();
-        //return app;
-    }
+    
 
     public static ICrmApplicationWithInternalServiceProvider Create<TStartupModule>(
         Action<CrmApplicationCreationOptions>? optionsAction = null)
@@ -80,7 +23,7 @@ public static class CrmApplicationFactory
     }
 
     public static ICrmApplicationWithExternalServiceProvider Create<TStartupModule>(
-         IServiceCollection services,
+        IServiceCollection services,
         Action<CrmApplicationCreationOptions>? optionsAction = null)
         where TStartupModule : IModule
     {
@@ -92,7 +35,9 @@ public static class CrmApplicationFactory
          IServiceCollection services,
         Action<CrmApplicationCreationOptions>? optionsAction = null)
     {
-        throw new NotImplementedException();
-        //return new CrmApplicationWithExternalServiceProvider(startupModuleType, services, optionsAction);
+        
+        return new CrmApplicationWithExternalServiceProvider(startupModuleType, services, optionsAction);
     }
+
+   
 }

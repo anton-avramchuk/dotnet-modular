@@ -27,20 +27,5 @@ public interface ICrmApplication :
     /// </summary>
     IServiceProvider ServiceProvider { get; }
 
-    /// <summary>
-    /// Calls the Pre/Post/ConfigureServicesAsync methods of the modules.
-    /// If you use this method, you must have set the <see cref="CrmApplicationCreationOptions.SkipConfigureServices"/>
-    /// option to true before.
-    /// </summary>
-    Task ConfigureServicesAsync();
-
-    /// <summary>
-    /// Used to gracefully shutdown the application and all modules.
-    /// </summary>
-    Task ShutdownAsync();
-
-    /// <summary>
-    /// Used to gracefully shutdown the application and all modules.
-    /// </summary>
-    void Shutdown();
+    
 }
