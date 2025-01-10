@@ -1,8 +1,10 @@
 ﻿using Dotnet.Modular.Core;
+using Dotnet.Modular.Modules.Blazor.Components.Core;
 
-namespace Dotnet.Modular.Modules.Blazor.Layout.Core;
+namespace Dotnet.Modular.Modules.Blazor.Components;
 
-public partial class BlazorLayoutCoreModule: ModuleBase
+[DependsOn(typeof(BlazorComponentsCoreModule))]
+public partial class BlazorComponentsModule : ModuleBase
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

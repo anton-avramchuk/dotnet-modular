@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Layout", "src\modules\Dotnet.Modular.Modules.Blazor.Layout\Dotnet.Modular.Modules.Blazor.Layout.csproj", "{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components", "src\modules\Dotnet.Modular.Modules.Blazor.Components\Dotnet.Modular.Modules.Blazor.Components.csproj", "{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +104,6 @@ Global
 		{3DCBE68E-861F-4795-AEC0-8F71727E771A} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{FD549BBE-F9A6-4ECB-9CA4-9FF025C2B7B9} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 	EndGlobalSection
 EndGlobal
