@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+
+		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Components.Core\Dotnet.Modular.Modules.Blazor.Components.Core.csproj" />
+	</ItemGroup>
+
+</Project>

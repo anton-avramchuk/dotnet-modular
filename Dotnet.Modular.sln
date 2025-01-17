@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components", "src\modules\Dotnet.Modular.Modules.Blazor.Components\Dotnet.Modular.Modules.Blazor.Components.csproj", "{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Components.Material", "src\modules\Dotnet.Modular.Modules.Blazor.Components.Material\Dotnet.Modular.Modules.Blazor.Components.Material.csproj", "{C0BAAAF8-319F-4727-8A84-F709FF57754C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Blazor.Layout.Material", "src\modules\Dotnet.Modular.Modules.Blazor.Layout.Material\Dotnet.Modular.Modules.Blazor.Layout.Material.csproj", "{39F96AF0-5428-4C02-82E3-7B0AADAA4072}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +89,14 @@ Global
 		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BAAAF8-319F-4727-8A84-F709FF57754C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BAAAF8-319F-4727-8A84-F709FF57754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BAAAF8-319F-4727-8A84-F709FF57754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BAAAF8-319F-4727-8A84-F709FF57754C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F96AF0-5428-4C02-82E3-7B0AADAA4072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F96AF0-5428-4C02-82E3-7B0AADAA4072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F96AF0-5428-4C02-82E3-7B0AADAA4072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F96AF0-5428-4C02-82E3-7B0AADAA4072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +110,7 @@ Global
 		{FD549BBE-F9A6-4ECB-9CA4-9FF025C2B7B9} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{7BE34ECB-D882-4ECF-8C72-A5D846D0B67A} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{BCF4804E-F2EA-419D-8DA9-39AC44EEBB13} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{C0BAAAF8-319F-4727-8A84-F709FF57754C} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{39F96AF0-5428-4C02-82E3-7B0AADAA4072} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 	EndGlobalSection
 EndGlobal
