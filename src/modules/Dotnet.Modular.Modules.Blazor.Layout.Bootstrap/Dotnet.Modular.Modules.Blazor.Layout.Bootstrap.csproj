@@ -8,13 +8,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
-    <ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Layout.Core\Dotnet.Modular.Modules.Blazor.Layout.Core.csproj" />
   </ItemGroup>
 
 
 	<ItemGroup>
 		
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Services\" />
 	</ItemGroup>
 
 </Project>

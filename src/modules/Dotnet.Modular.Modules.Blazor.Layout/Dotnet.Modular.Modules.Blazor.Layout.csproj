@@ -8,7 +8,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
-		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Layout.Core\Dotnet.Modular.Modules.Blazor.Layout.Core.csproj" />
 	</ItemGroup>
 
 
