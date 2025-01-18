@@ -1,11 +1,11 @@
 ﻿using Dotnet.Modular.Core;
-using Dotnet.Modular.Modules.Blazor.Components.Bootstrap;
+using Dotnet.Modular.Modules.Blazor.Layout.Material;
 
 namespace Dotnet.Modular.Blazor.Server.App
 {
 
     [Bootstraper]
-    [DependsOn(typeof(BlazorComponentsBootstrapModule))]
+    [DependsOn(typeof(BlazorLayoutMaterialModule))]
     public partial class AppBoostrapper : ModuleBase
     {
         public AppBoostrapper()
