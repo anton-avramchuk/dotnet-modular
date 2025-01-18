@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="MudBlazor" Version="7.16.0" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
 	</ItemGroup>
 
@@ -14,10 +18,6 @@
 	<ItemGroup>
 
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
-
-		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Components.Core\Dotnet.Modular.Modules.Blazor.Components.Core.csproj" />
-
-		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Material\Dotnet.Modular.Modules.Blazor.Material.csproj" />
 	</ItemGroup>
 
 </Project>
