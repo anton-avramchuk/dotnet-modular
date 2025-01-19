@@ -1,14 +1,8 @@
-﻿using Dotnet.Modular.Core;
-
-namespace Dotnet.Modular.Modules.Navigation;
+﻿namespace Dotnet.Modular.Modules.Navigation;
 
 public interface IMenuManager
 {
+    Task<IApplicationMenu> GetAsync(string name);
 
-}
-
-[Export(ExportType.Trancient, typeof(IMenuManager))]
-public class MenuManager : IMenuManager
-{
-
+    Task<IApplicationMenu> GetMainMenuAsync();
 }

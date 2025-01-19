@@ -6,6 +6,6 @@ public partial class NavigationModule : ModuleBase
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        //RegisterServices(context.Services);
+        RegisterServices(context.Services);
     }
 }
