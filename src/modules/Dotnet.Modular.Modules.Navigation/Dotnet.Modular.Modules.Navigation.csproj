@@ -9,6 +9,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\Dotnet.Modular.Modules.UI\Dotnet.Modular.Modules.UI.csproj" />
 	</ItemGroup>
 
 </Project>
