@@ -19,6 +19,8 @@
 
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Layout\Dotnet.Modular.Modules.Blazor.Layout.csproj" />
+
 		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Material\Dotnet.Modular.Modules.Blazor.Material.csproj" />
 
 		<ProjectReference Include="..\Dotnet.Modular.Modules.UI\Dotnet.Modular.Modules.UI.csproj" />
