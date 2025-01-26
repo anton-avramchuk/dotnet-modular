@@ -19,3 +19,4 @@ public interface IApplicationMenuItem
 
     IApplicationMenuItem AddItem(IApplicationMenuItem menuItem);
 }
+
