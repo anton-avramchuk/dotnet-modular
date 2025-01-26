@@ -1,4 +1,5 @@
 ﻿using Dotnet.Modular.Modules.Navigation;
+using Dotnet.Modular.Modules.UI;
 
 namespace Dotnet.Modular.Blazor.Server.App.Services
 {
@@ -17,15 +18,15 @@ namespace Dotnet.Modular.Blazor.Server.App.Services
             context.Menu.Items.Insert(
             0,
             new ApplicationMenuItem(
-                MainMenu.Dashboard,
+                MainMenuNames.Dashboard,
                 "Dashboard",
-                "/"
+                "/",
+                FontIcons.Dashboard
             ));
 
             context.Menu.Items.Insert(
             1,
             new ApplicationMenuItem(
-                MainMenu.Counter,
                 "Counter",
                 "/counter"
             ));

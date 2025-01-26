@@ -1,6 +1,6 @@
 ﻿namespace Dotnet.Modular.Blazor.Server.App.Services
 {
-    public static class MainMenu
+    public static class MainMenuNames
     {
         private const string Prefix = "MainMenu";
 
