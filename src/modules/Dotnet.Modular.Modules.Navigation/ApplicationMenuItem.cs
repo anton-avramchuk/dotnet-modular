@@ -2,7 +2,7 @@
 using Dotnet.Modular.Core.States;
 namespace Dotnet.Modular.Modules.Navigation;
 
-public class ApplicationMenuItem : IHasMenuItems, IHasSimpleStateCheckers<ApplicationMenuItem>, IApplicationMenuItem
+public class ApplicationMenuItem : IApplicationMenuItem
 {
     private string _displayName = default!;
     private string? _elementId;
@@ -69,7 +69,7 @@ public class ApplicationMenuItem : IHasMenuItems, IHasSimpleStateCheckers<Applic
     [Obsolete("Use RequirePermissions extension method.")]
     public string? RequiredPermissionName { get; set; }
 
-    public List<ISimpleStateChecker<ApplicationMenuItem>> StateCheckers { get; }
+    public List<ISimpleStateChecker<IApplicationMenuItem>> StateCheckers { get; }
 
     /// <summary>
     /// Can be used to store a custom object related to this menu item. Optional.
@@ -121,7 +121,7 @@ public class ApplicationMenuItem : IHasMenuItems, IHasSimpleStateCheckers<Applic
         CssClass = cssClass;
         GroupName = groupName;
         RequiredPermissionName = requiredPermissionName;
-        StateCheckers = new List<ISimpleStateChecker<ApplicationMenuItem>>();
+        StateCheckers = new List<ISimpleStateChecker<IApplicationMenuItem>>();
         Items = new ApplicationMenuItemList();
     }
 

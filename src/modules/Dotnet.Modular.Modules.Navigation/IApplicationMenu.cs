@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-namespace Dotnet.Modular.Modules.Navigation;
+﻿namespace Dotnet.Modular.Modules.Navigation;
 
 public interface IApplicationMenu
 {
@@ -8,5 +6,7 @@ public interface IApplicationMenu
 
     string? DisplayName { get; }
     //remove list
-    IList<IApplicationMenuItem> Items { get; }
+    ApplicationMenuItemList Items { get; }
+
+    IApplicationMenu AddItem(IApplicationMenuItem menuItem);
 }
