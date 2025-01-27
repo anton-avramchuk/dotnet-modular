@@ -1,4 +1,4 @@
-﻿using Dotnet.Modular.Modules.UI.Services.Abstractions;
+using Dotnet.Modular.Modules.UI.Services.Abstractions;
 using Microsoft.AspNetCore.Components;
 
 namespace Dotnet.Modular.Modules.Blazor.Layout.Material
