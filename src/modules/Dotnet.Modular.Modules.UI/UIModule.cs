@@ -1,10 +1,8 @@
 ﻿using Dotnet.Modular.Core;
-using Dotnet.Modular.Modules.UI;
 
-namespace Dotnet.Modular.Modules.Navigation;
+namespace Dotnet.Modular.Modules.UI;
 
-[DependsOn(typeof(UIModule))]
-public partial class NavigationModule : ModuleBase
+public partial class UIModule: ModuleBase
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

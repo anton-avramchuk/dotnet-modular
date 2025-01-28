@@ -1,6 +1,8 @@
-﻿namespace Dotnet.Modular.Modules.Navigation;
+﻿using Dotnet.Modular.Core.States;
 
-public interface IApplicationMenuItem
+namespace Dotnet.Modular.Modules.Navigation;
+
+public interface IApplicationMenuItem: IHasMenuItems, IHasSimpleStateCheckers<IApplicationMenuItem>
 {
     string? CssClass { get; set; }
     Dictionary<string, object> CustomData { get; }
@@ -19,3 +21,4 @@ public interface IApplicationMenuItem
 
     IApplicationMenuItem AddItem(IApplicationMenuItem menuItem);
 }
+

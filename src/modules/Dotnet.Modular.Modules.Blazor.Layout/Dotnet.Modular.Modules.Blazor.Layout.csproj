@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="9.0.1" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
 	</ItemGroup>
@@ -14,6 +18,10 @@
 	<ItemGroup>
 
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Navigation\Dotnet.Modular.Modules.Navigation.csproj" />
+
+		<ProjectReference Include="..\Dotnet.Modular.Modules.UI\Dotnet.Modular.Modules.UI.csproj" />
 	</ItemGroup>
 	
 </Project>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="MudBlazor" Version="7.16.0" />
+	  <PackageReference Include="MudBlazor" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,7 +19,11 @@
 
 		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Layout\Dotnet.Modular.Modules.Blazor.Layout.csproj" />
+
 		<ProjectReference Include="..\Dotnet.Modular.Modules.Blazor.Material\Dotnet.Modular.Modules.Blazor.Material.csproj" />
+
+		<ProjectReference Include="..\Dotnet.Modular.Modules.UI\Dotnet.Modular.Modules.UI.csproj" />
 	</ItemGroup>
 
 </Project>

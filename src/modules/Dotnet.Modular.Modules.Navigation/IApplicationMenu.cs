@@ -4,5 +4,9 @@ public interface IApplicationMenu
 {
     string Name { get; }
 
-    IEnumerable<IApplicationMenuItem> Items { get; }
+    string? DisplayName { get; }
+    //remove list
+    ApplicationMenuItemList Items { get; }
+
+    IApplicationMenu AddItem(IApplicationMenuItem menuItem);
 }

@@ -1,0 +1,12 @@
+@namespace Dotnet.Modular.Modules.Blazor.Layout.Material.Components
+@inherits Dotnet.Modular.Modules.Blazor.Layout.Components.MainMenuComponentBase
+
+<MudNavMenu>
+    @if (Menu != null)
+    {
+        @foreach (var item in Menu.Items)
+        {
+            <MainMenuItem MenuItem="@item" />
+        }
+    }
+</MudNavMenu>

@@ -1,0 +1,40 @@
+@namespace Dotnet.Modular.Modules.Blazor.Layout.Material.Components
+@using Dotnet.Modular.Modules.Navigation
+@inherits Dotnet.Modular.Modules.Blazor.Layout.Components.MenuItemComponentBase
+
+@if (MenuItem != null)
+{
+    @* @if ((MenuItem as IHasMenuItems)?.Items.Any() == true)
+    {
+        <MudNavGroup Title="@DisplayName" 
+                     Icon="@(string.IsNullOrEmpty(Icon) ? Icons.Material.Filled.ChevronRight : Icon)"
+                     Expanded="false"
+                     Disabled="@IsDisabled">
+            @foreach (var childItem in (MenuItem as IHasMenuItems)!.Items)
+            {
+                <MainMenuItem MenuItem="@childItem" />
+            }
+        </MudNavGroup>
+    }
+    else
+    {
+        <MudNavLink Href="@Url" 
+                    Match="NavLinkMatch.Prefix" 
+                    Icon="@(string.IsNullOrEmpty(Icon) ? Icons.Material.Filled.ChevronRight : Icon)"
+                    Disabled="@IsDisabled"
+                    Target="@Target">
+            @DisplayName
+        </MudNavLink>
+    } *@
+
+    @if (HasChildren)
+    {
+
+    }
+    else
+    {
+        <MudNavLink Href="@MenuItem.Url" Icon="@TransformedIcon">
+            @MenuItem.DisplayName
+        </MudNavLink>
+    }
+}
