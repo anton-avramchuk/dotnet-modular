@@ -4,7 +4,7 @@
 
 @if (MenuItem != null)
 {
-    @if ((MenuItem as IHasMenuItems)?.Items.Any() == true)
+    @* @if ((MenuItem as IHasMenuItems)?.Items.Any() == true)
     {
         <MudNavGroup Title="@DisplayName" 
                      Icon="@(string.IsNullOrEmpty(Icon) ? Icons.Material.Filled.ChevronRight : Icon)"
@@ -24,6 +24,17 @@
                     Disabled="@IsDisabled"
                     Target="@Target">
             @DisplayName
+        </MudNavLink>
+    } *@
+
+    @if (HasChildren)
+    {
+
+    }
+    else
+    {
+        <MudNavLink Href="@MenuItem.Url" Icon="@TransformedIcon">
+            @MenuItem.DisplayName
         </MudNavLink>
     }
 }

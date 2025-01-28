@@ -12,44 +12,44 @@ public class MaterialIconTransformer : IIconTransformer
     private static readonly Dictionary<string, string> IconMappings = new()
     {
         // Navigation and Menu
-        { FontIcons.Menu, "menu" },
-        { FontIcons.Dashboard, "dashboard" },
-        { FontIcons.Home, "home" },
-        { FontIcons.Back, "arrow_back" },
-        { FontIcons.Forward, "arrow_forward" },
-        { FontIcons.Close, "close" },
+        { FontIcons.Menu, MudBlazor.Icons.Material.Filled.Menu },
+        { FontIcons.Dashboard, MudBlazor.Icons.Material.Filled.Dashboard },
+        { FontIcons.Home, MudBlazor.Icons.Material.Filled.Home },
+        { FontIcons.Back, MudBlazor.Icons.Material.Filled.ArrowBack },
+        { FontIcons.Forward, MudBlazor.Icons.Material.Filled.ArrowForward },
+        { FontIcons.Close, MudBlazor.Icons.Material.Filled.Close },
 
         // Common Actions
-        { FontIcons.Add, "add" },
-        { FontIcons.Edit, "edit" },
-        { FontIcons.Delete, "delete" },
-        { FontIcons.Save, "save" },
-        { FontIcons.Cancel, "cancel" },
+        { FontIcons.Add, MudBlazor.Icons.Material.Filled.Add },
+        { FontIcons.Edit, MudBlazor.Icons.Material.Filled.Edit },
+        { FontIcons.Delete, MudBlazor.Icons.Material.Filled.Delete },
+        { FontIcons.Save, MudBlazor.Icons.Material.Filled.Save },
+        { FontIcons.Cancel, MudBlazor.Icons.Material.Filled.Cancel },
 
         // Status and Feedback
-        { FontIcons.Success, "check_circle" },
-        { FontIcons.Warning, "warning" },
-        { FontIcons.Error, "error" },
-        { FontIcons.Info, "info" },
-        { FontIcons.Help, "help" },
+        { FontIcons.Success, MudBlazor.Icons.Material.Filled.CheckCircle },
+        { FontIcons.Warning, MudBlazor.Icons.Material.Filled.Warning },
+        { FontIcons.Error, MudBlazor.Icons.Material.Filled.Error },
+        { FontIcons.Info, MudBlazor.Icons.Material.Filled.Info },
+        { FontIcons.Help, MudBlazor.Icons.Material.Filled.Help },
 
         // Content
-        { FontIcons.Search, "search" },
-        { FontIcons.Filter, "filter_list" },
-        { FontIcons.Sort, "sort" },
-        { FontIcons.Settings, "settings" },
-        { FontIcons.Download, "download" },
-        { FontIcons.Upload, "upload" },
-        { FontIcons.Print, "print" },
-        { FontIcons.Share, "share" },
+        { FontIcons.Search, MudBlazor.Icons.Material.Filled.Search },
+        { FontIcons.Filter, MudBlazor.Icons.Material.Filled.FilterList },
+        { FontIcons.Sort, MudBlazor.Icons.Material.Filled.Sort },
+        { FontIcons.Settings, MudBlazor.Icons.Material.Filled.Settings },
+        { FontIcons.Download, MudBlazor.Icons.Material.Filled.Download },
+        { FontIcons.Upload, MudBlazor.Icons.Material.Filled.Upload },
+        { FontIcons.Print, MudBlazor.Icons.Material.Filled.Print },
+        { FontIcons.Share, MudBlazor.Icons.Material.Filled.Share },
 
         // Navigation Controls
-        { FontIcons.Previous, "chevron_left" },
-        { FontIcons.Next, "chevron_right" },
-        { FontIcons.Up, "keyboard_arrow_up" },
-        { FontIcons.Down, "keyboard_arrow_down" },
-        { FontIcons.Expand, "expand_more" },
-        { FontIcons.Collapse, "expand_less" }
+        { FontIcons.Previous, MudBlazor.Icons.Material.Filled.ChevronLeft },
+        { FontIcons.Next, MudBlazor.Icons.Material.Filled.ChevronRight },
+        { FontIcons.Up, MudBlazor.Icons.Material.Filled.KeyboardArrowUp },
+        { FontIcons.Down, MudBlazor.Icons.Material.Filled.KeyboardArrowDown },
+        { FontIcons.Expand, MudBlazor.Icons.Material.Filled.ExpandMore },
+        { FontIcons.Collapse, MudBlazor.Icons.Material.Filled.ExpandLess }
     };
 
     /// <summary>

@@ -82,14 +82,14 @@ public class MenuManager : IMenuManager
         {
             //using (RequirePermissionsSimpleBatchStateChecker<IApplicationMenuItem>.Use(new RequirePermissionsSimpleBatchStateChecker<ApplicationMenuItem>()))
             //{
-            //    var context = new MenuConfigurationContext(menu, scope.ServiceProvider);
+            var context = new MenuConfigurationContext(menu, scope.ServiceProvider);
 
-            //    foreach (var contributor in Options.MenuProviders)
-            //    {
-            //        await contributor.ConfigureMenuAsync(context);
-            //    }
+            foreach (var contributor in Options.MenuProviders)
+            {
+                await contributor.ConfigureMenuAsync(context);
+            }
 
-            //    await CheckPermissionsAsync(scope.ServiceProvider, menu);
+            await CheckPermissionsAsync(scope.ServiceProvider, menu);
             //}
         }
 

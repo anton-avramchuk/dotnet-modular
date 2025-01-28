@@ -55,6 +55,14 @@ public abstract class MenuItemComponentBase : ComponentBase
 
     public string? TransformedIcon => _icon;
 
+    public bool HasChildren
+    {
+        get
+        {
+            return !MenuItem.IsLeaf;
+        }
+    }
+
     protected override void OnParametersSet()
     {
         base.OnParametersSet();
