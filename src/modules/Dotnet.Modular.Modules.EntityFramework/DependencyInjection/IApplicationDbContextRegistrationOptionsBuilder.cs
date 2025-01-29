@@ -1,0 +1,6 @@
+﻿namespace Dotnet.Modular.Modules.EntityFramework.DependencyInjection;
+
+public interface IApplicationDbContextRegistrationOptionsBuilder : IApplicationCommonDbContextRegistrationOptionsBuilder
+{
+
+}

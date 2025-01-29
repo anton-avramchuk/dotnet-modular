@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Dotnet.Modular.Core\Dotnet.Modular.Core.csproj" />
+		<ProjectReference Include="..\..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Data\Dotnet.Modular.Modules.Data.csproj" />
+	</ItemGroup>
+
+</Project>
