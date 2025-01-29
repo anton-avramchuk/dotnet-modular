@@ -45,6 +45,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.EntityFramework", "src\modules\Dotnet.Modular.Modules.EntityFramework\Dotnet.Modular.Modules.EntityFramework.csproj", "{BFAF8B0D-F4E8-466D-8C97-BC9FDDF61D17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.EntityFramework.MsSql", "src\modules\Dotnet.Modular.Modules.EntityFramework.MsSql\Dotnet.Modular.Modules.EntityFramework.MsSql.csproj", "{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.EntityFramework.PostgreSql", "src\modules\Dotnet.Modular.Modules.EntityFramework.PostgreSql\Dotnet.Modular.Modules.EntityFramework.PostgreSql.csproj", "{4304BE91-CB91-4536-BEC0-2E5AA00A6790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Modular.Modules.EntityFramework.Sqlite", "src\modules\Dotnet.Modular.Modules.EntityFramework.Sqlite\Dotnet.Modular.Modules.EntityFramework.Sqlite.csproj", "{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +133,18 @@ Global
 		{BFAF8B0D-F4E8-466D-8C97-BC9FDDF61D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFAF8B0D-F4E8-466D-8C97-BC9FDDF61D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFAF8B0D-F4E8-466D-8C97-BC9FDDF61D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4304BE91-CB91-4536-BEC0-2E5AA00A6790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4304BE91-CB91-4536-BEC0-2E5AA00A6790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4304BE91-CB91-4536-BEC0-2E5AA00A6790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4304BE91-CB91-4536-BEC0-2E5AA00A6790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,5 +165,8 @@ Global
 		{378F7495-827B-48DD-992F-41C18AE08A46} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{03538264-417C-4637-9654-715181BC887C} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 		{BFAF8B0D-F4E8-466D-8C97-BC9FDDF61D17} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{29EB5B10-5EA2-4EE5-A2B2-D456E70B59EC} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{4304BE91-CB91-4536-BEC0-2E5AA00A6790} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
+		{3B4CD8C9-4C95-41BA-B827-DA15DFC7A7E2} = {05AF4197-C0A6-4C5E-97DE-379A1D9B30DD}
 	EndGlobalSection
 EndGlobal
