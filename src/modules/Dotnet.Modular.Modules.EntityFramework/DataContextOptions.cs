@@ -33,7 +33,7 @@ public class DataContextOptions
             {
                 if (foundType == dbContextType)
                 {
-                    throw new CrmException(
+                    throw new Exception(
                         "Circular DbContext replacement found for " +
                         dbContextType.AssemblyQualifiedName
                     );

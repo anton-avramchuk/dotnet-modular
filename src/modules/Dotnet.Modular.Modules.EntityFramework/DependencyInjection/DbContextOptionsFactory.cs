@@ -1,4 +1,5 @@
-﻿using Dotnet.Modular.Modules.Data.Abstractions;
+﻿using Dotnet.Modular.Core.Extensions.Collections;
+using Dotnet.Modular.Modules.Data.Abstractions;
 using Dotnet.Modular.Modules.Data.Attributes;
 using Dotnet.Modular.Modules.EntityFramework;
 using Microsoft.EntityFrameworkCore;
