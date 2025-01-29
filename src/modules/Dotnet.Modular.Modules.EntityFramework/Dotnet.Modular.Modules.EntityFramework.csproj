@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MsPackageVersion)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MsPackageVersion)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Data\Dotnet.Modular.Modules.Data.csproj" />
+		<ProjectReference Include="..\Dotnet.Modular.Modules.Domain\Dotnet.Modular.Modules.Domain.csproj" />
+	</ItemGroup>
+</Project>
