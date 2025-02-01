@@ -1,4 +1,4 @@
-﻿using Crm.Core.Exceptions;
+﻿using Dotnet.Modular.Core.Exceptions;
 using System;
 
 namespace Dotnet.Modular.Core;

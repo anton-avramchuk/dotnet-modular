@@ -1,8 +1,7 @@
 ﻿using Dotnet.Modular.Modules.Domain;
-using Dotnet.Modular.Modules.Identity.Domain;
 using System.Security.Claims;
 
-namespace Crm.Core.Identity.Domain
+namespace Dotnet.Modular.Modules.Identity.Domain
 {
     public class IdentityUser<TIdentityRole> : Entity<Guid>, IAggregateRoot where TIdentityRole : IdentityRole
     {

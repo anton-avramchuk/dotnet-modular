@@ -1,6 +1,6 @@
 ﻿using Dotnet.Modular.Modules.EntityFramework;
 
-namespace Crm.DataAccess.EntityFramework.Providers;
+namespace Dotnet.Modular.Modules.EntityFramework.Providers;
 
 public interface IDbContextProvider<TDbContext>
     where TDbContext : IDataContext

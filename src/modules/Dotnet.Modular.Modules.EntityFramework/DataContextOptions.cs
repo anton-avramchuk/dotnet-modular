@@ -1,6 +1,4 @@
-﻿using Crm.DataAccess.EntityFramework;
-
-namespace Dotnet.Modular.Modules.EntityFramework;
+﻿namespace Dotnet.Modular.Modules.EntityFramework;
 
 public class DataContextOptions
 {

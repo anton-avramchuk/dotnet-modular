@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Dotnet.Modular.Modules.Identity\Dotnet.Modular.Modules.Identity.csproj" />
         <ProjectReference Include="..\..\Dotnet.Modular.Modules.Domain\Dotnet.Modular.Modules.Domain.csproj" />
     </ItemGroup>
 

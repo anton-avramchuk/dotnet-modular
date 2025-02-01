@@ -1,5 +1,4 @@
 using Dotnet.Modular.Modules.Domain.Common;
-using Dotnet.Modular.Modules.EntityFramework.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage;

@@ -1,6 +1,4 @@
-﻿using Crm.DataAccess.EntityFramework;
-using Crm.DataAccess.EntityFramework.PostgreSql.Extensions;
-using Dotnet.Modular.Modules.EntityFramework.PostgreSql.Extensions;
+﻿using Dotnet.Modular.Modules.EntityFramework.PostgreSql.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 

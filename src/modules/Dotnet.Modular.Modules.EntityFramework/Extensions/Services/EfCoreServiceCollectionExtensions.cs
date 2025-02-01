@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Crm.DataAccess.EntityFramework.DependencyInjection;
 using Dotnet.Modular.Modules.EntityFramework.Attributes;
 using Dotnet.Modular.Modules.EntityFramework.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
