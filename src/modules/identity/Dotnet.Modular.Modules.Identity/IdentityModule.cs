@@ -3,7 +3,6 @@ using Dotnet.Modular.Modules.Core;
 using Dotnet.Modular.Modules.EntityFramework;
 using Dotnet.Modular.Modules.Identity.Domain;
 using Dotnet.Modular.Security;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Dotnet.Modular.Modules.Identity;
 

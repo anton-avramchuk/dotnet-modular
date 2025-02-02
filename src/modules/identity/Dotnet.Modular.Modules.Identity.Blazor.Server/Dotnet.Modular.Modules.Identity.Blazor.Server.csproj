@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Dotnet.Modular.Modules.Identity.Blazor\Dotnet.Modular.Modules.Identity.Blazor.csproj" />
+        <ProjectReference Include="..\Dotnet.Modular.Modules.Identity\Dotnet.Modular.Modules.Identity.csproj" />
     </ItemGroup>
 
     <ItemGroup>

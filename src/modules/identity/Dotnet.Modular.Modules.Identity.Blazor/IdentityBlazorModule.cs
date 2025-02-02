@@ -6,6 +6,7 @@ namespace Dotnet.Modular.Modules.Identity.Blazor;
 
 [DependsOn(typeof(BlazorComponentsModule))]
 [DependsOn(typeof(IdentityDomainModule))]
+[DependsOn(typeof(IdentityModule))]
 public partial class IdentityBlazorModule : ModuleBase
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
