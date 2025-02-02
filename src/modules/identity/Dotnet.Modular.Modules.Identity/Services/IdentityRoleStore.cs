@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace Dotnet.Modular.Modules.Identity.Services
 {
-    [Export(ExportType.Scope, typeof(IdentityRoleStore<,>))]
+    [Export(ExportType.Scope, typeof(IRoleStore<>))]
     public class IdentityRoleStore<TIdentityRole, TIdentityDbContext> : IRoleStore<TIdentityRole>, IRoleClaimStore<TIdentityRole>, IQueryableRoleStore<TIdentityRole>
         where TIdentityRole : IdentityRole
         where TIdentityDbContext : IIdentityDbContext

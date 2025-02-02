@@ -89,7 +89,7 @@ namespace {moduleSymbol.ContainingNamespace}
             {
                 foreach (var attribute in classSymbol.GetAttributes().Where(a => a.AttributeClass?.ToDisplayString() == Constants.ExportAttributeName))
                 {
-                    var exportType =(ExportType)attribute.ConstructorArguments[0].Value;
+                    var exportType = (ExportType)attribute.ConstructorArguments[0].Value;
                     var exportedTypes = attribute.ConstructorArguments[1].Values;
 
                     var registrationMethod = exportType switch
@@ -100,23 +100,24 @@ namespace {moduleSymbol.ContainingNamespace}
                         _ => throw new NotImplementedException(),
                     };
 
+                    string implementationType = GetTypeName(classSymbol);
 
                     if (exportedTypes.Length == 0)
                     {
-                        registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                        registrations.AppendLine($"services.{registrationMethod}(typeof({implementationType}));");
                     }
                     else
                     {
                         foreach (var exportedType in exportedTypes)
                         {
-                            var typeName = exportedType.Value?.ToString();
-                            if (!string.IsNullOrEmpty(typeName))
+                            var serviceType = exportedType.Value?.ToString();
+                            if (!string.IsNullOrEmpty(serviceType))
                             {
-                                registrations.AppendLine($"services.{registrationMethod}<{typeName}, {classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}(typeof({serviceType}), typeof({implementationType}));");
                             }
                             else
                             {
-                                registrations.AppendLine($"services.{registrationMethod}<{classSymbol.ToDisplayString()}>();");
+                                registrations.AppendLine($"services.{registrationMethod}(typeof({implementationType}));");
                             }
                         }
                     }
@@ -125,6 +126,28 @@ namespace {moduleSymbol.ContainingNamespace}
 
             return registrations.ToString();
         }
+
+        /// <summary>
+        /// Генерирует строковое представление типа, включая поддержку дженериков.
+        /// </summary>
+        private static string GetTypeName(INamedTypeSymbol typeSymbol)
+        {
+            if (typeSymbol.TypeParameters.Length == 0)
+            {
+                return typeSymbol.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+            }
+
+            string baseName = typeSymbol.ContainingNamespace.IsGlobalNamespace
+                ? typeSymbol.Name
+                : $"{typeSymbol.ContainingNamespace}.{typeSymbol.Name}";
+
+            string genericParams = new string(',', typeSymbol.TypeParameters.Length - 1);
+
+            return $"{baseName}<{genericParams}>";
+        }
+
+
+
 
 
 

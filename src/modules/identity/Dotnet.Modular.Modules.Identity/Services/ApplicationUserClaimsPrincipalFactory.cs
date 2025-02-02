@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace Dotnet.Modular.Modules.Identity.Services;
 
-[Export(ExportType.Scope,typeof(UserClaimsPrincipalFactory<,>))]
+[Export(ExportType.Scope,typeof(IUserClaimsPrincipalFactory<>))]
 public class ApplicationUserClaimsPrincipalFactory<TIdentityUser, TIdentityRole> : UserClaimsPrincipalFactory<TIdentityUser, TIdentityRole>
     where TIdentityRole : IdentityRole
     where TIdentityUser : IdentityUser<TIdentityRole>
