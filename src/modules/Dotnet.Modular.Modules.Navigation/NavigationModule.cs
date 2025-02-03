@@ -9,5 +9,9 @@ public partial class NavigationModule : ModuleBase
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         RegisterServices(context.Services);
+        Configure<NavigationOptions>(options =>
+        {
+            options.MenuProviders.Add(new DefaultMenuProvider());
+        });
     }
 }

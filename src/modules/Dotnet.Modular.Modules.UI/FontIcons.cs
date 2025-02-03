@@ -105,5 +105,7 @@ namespace Dotnet.Modular.Modules.UI
         public const string Expand = nameof(Expand);
 
         public const string Collapse = nameof(Collapse);
+
+        public const string Admin = nameof(Admin);
     }
 }
