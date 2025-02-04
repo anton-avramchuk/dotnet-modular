@@ -3,7 +3,7 @@ using Dotnet.Modular.Modules.Data;
 using Dotnet.Modular.Modules.Data.Abstractions;
 using Npgsql;
 
-namespace Crm.DataAccess.EntityFramework.PostgreSql.ConnectionStrings;
+namespace Dotnet.Modular.Modules.EntityFramework.PostgreSql.ConnectionStrings;
 
 [Export(ExportType.Trancient, typeof(IConnectionStringChecker))]
 public class NpgsqlConnectionStringChecker : IConnectionStringChecker

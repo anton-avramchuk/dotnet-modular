@@ -1,4 +1,5 @@
 ﻿using Dotnet.Modular.Core.States;
+using System.Runtime.InteropServices;
 
 namespace Dotnet.Modular.Modules.Navigation;
 
@@ -21,4 +22,3 @@ public interface IApplicationMenuItem: IHasMenuItems, IHasSimpleStateCheckers<IA
 
     IApplicationMenuItem AddItem(IApplicationMenuItem menuItem);
 }
-

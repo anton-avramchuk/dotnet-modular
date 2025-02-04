@@ -1,12 +1,11 @@
 ﻿using Dotnet.Modular.Core.Extensions.Collections;
 using Dotnet.Modular.Modules.Data.Abstractions;
 using Dotnet.Modular.Modules.Data.Attributes;
-using Dotnet.Modular.Modules.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Crm.DataAccess.EntityFramework.DependencyInjection;
+namespace Dotnet.Modular.Modules.EntityFramework.DependencyInjection;
 
 public static class DbContextOptionsFactory
 {

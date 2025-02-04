@@ -1,8 +1,7 @@
 ﻿using Dotnet.Modular.Modules.EntityFramework;
-using Dotnet.Modular.Modules.EntityFramework.PostgreSql.Extensions;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 
-namespace Crm.DataAccess.EntityFramework.PostgreSql.Extensions;
+namespace Dotnet.Modular.Modules.EntityFramework.PostgreSql.Extensions;
 
 public static class DataContextOptionsPostgreSqlExtensions
 {

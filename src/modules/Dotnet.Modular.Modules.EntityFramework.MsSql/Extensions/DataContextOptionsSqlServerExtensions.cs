@@ -1,7 +1,7 @@
 ﻿using Dotnet.Modular.Modules.EntityFramework;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace Crm.DataAccess.EntityFramework.MsSql.Extensions;
+namespace Dotnet.Modular.Modules.EntityFramework.MsSql.Extensions;
 
 public static class DataContextOptionsSqlServerExtensions
 {

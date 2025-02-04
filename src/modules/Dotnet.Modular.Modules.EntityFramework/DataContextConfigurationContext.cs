@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Data.Common;
 
-namespace Crm.DataAccess.EntityFramework;
+namespace Dotnet.Modular.Modules.EntityFramework;
 
 public class DataContextConfigurationContext : IServiceProviderAccessor
 {

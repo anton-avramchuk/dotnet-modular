@@ -5,7 +5,7 @@ using Dotnet.Modular.Modules.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Crm.DataAccess.EntityFramework.Providers;
+namespace Dotnet.Modular.Modules.EntityFramework.Providers;
 
 public class DbContextProvider<TDbContext> : IDbContextProvider<TDbContext>, IServiceProviderAccessor
     where TDbContext : IDataContext

@@ -49,7 +49,9 @@ public class MaterialIconTransformer : IIconTransformer
         { FontIcons.Up, MudBlazor.Icons.Material.Filled.KeyboardArrowUp },
         { FontIcons.Down, MudBlazor.Icons.Material.Filled.KeyboardArrowDown },
         { FontIcons.Expand, MudBlazor.Icons.Material.Filled.ExpandMore },
-        { FontIcons.Collapse, MudBlazor.Icons.Material.Filled.ExpandLess }
+        { FontIcons.Collapse, MudBlazor.Icons.Material.Filled.ExpandLess },
+
+        {FontIcons.Admin,MudBlazor.Icons.Material.Filled.AdminPanelSettings }
     };
 
     /// <summary>

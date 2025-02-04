@@ -1,10 +1,9 @@
 ﻿using Dotnet.Modular.Modules.Domain.Common;
-using Dotnet.Modular.Modules.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Crm.DataAccess.EntityFramework;
+namespace Dotnet.Modular.Modules.EntityFramework;
 
 public abstract class DataContext<TDbContext> : DbContext, IDataContext
     where TDbContext : DbContext
@@ -43,7 +42,7 @@ public abstract class DataContext<TDbContext> : DbContext, IDataContext
             {
                 if (entry.Entity is ILastUpdatedTrackedEntity updatedEntity)
                 {
-                    updatedEntity.LastUpdatedAt=date;
+                    updatedEntity.LastUpdatedAt = date;
                 }
 
                 if (entry.Entity is ICreateTrackedEntity createdEntity && entry.State == EntityState.Added)

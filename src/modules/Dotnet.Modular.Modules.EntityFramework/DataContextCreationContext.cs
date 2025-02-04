@@ -1,8 +1,7 @@
-﻿using Crm.Core;
-using Dotnet.Modular.Core;
+﻿using Dotnet.Modular.Core;
 using System.Data.Common;
 
-namespace Crm.DataAccess.EntityFramework;
+namespace Dotnet.Modular.Modules.EntityFramework;
 
 public class DataContextCreationContext
 {
