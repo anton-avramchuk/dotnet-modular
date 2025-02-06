@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Dotnet.Modular.Auth.Core\Dotnet.Modular.Auth.Core.csproj" />
+    <ProjectReference Include="..\Dotnet.Modular.Security\Dotnet.Modular.Security.csproj" />
+  </ItemGroup>
+</Project>

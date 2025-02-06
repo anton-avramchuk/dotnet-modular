@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <ItemGroup>
+    <ProjectReference Include="..\Dotnet.Modular.Auth\Dotnet.Modular.Auth.csproj" />
+  </ItemGroup>
+</Project>
