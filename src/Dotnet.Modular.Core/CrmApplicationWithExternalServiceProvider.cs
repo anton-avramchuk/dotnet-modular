@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Threading.Tasks;
 
 namespace Dotnet.Modular.Core;
 
@@ -35,12 +34,6 @@ internal class CrmApplicationWithExternalServiceProvider : CrmApplicationBase, I
         SetServiceProvider(serviceProvider);
     }
 
-    //public async Task InitializeAsync(IServiceProvider serviceProvider)
-    //{
-    //    SetServiceProvider(serviceProvider);
-
-    //    await InitializeModulesAsync();
-    //}
 
     public void Initialize(IServiceProvider serviceProvider)
     {

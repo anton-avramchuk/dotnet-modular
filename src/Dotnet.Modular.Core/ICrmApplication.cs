@@ -1,7 +1,6 @@
 using Dotnet.Modular.Core.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Threading.Tasks;
 
 namespace Dotnet.Modular.Core;
 
@@ -27,5 +26,5 @@ public interface ICrmApplication :
     /// </summary>
     IServiceProvider ServiceProvider { get; }
 
-    
+    void Shutdown();
 }

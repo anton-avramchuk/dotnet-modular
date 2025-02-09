@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Dotnet.Modular.Blazor.Server.App;
 
 var builder = WebApplication.CreateBuilder(args);
