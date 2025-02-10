@@ -2,7 +2,7 @@
 
 namespace Dotnet.Modular.AspNetCore;
 
-public class AspNetCoreModule : ModuleBase
+public partial class AspNetCoreModule : ModuleBase
 {
 
 }

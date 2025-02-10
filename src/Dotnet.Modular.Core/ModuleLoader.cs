@@ -1,6 +1,5 @@
 ﻿using Dotnet.Modular.Core.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
 using System;
 using System.Linq;
 

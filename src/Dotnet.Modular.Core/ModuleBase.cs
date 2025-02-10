@@ -1,13 +1,18 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Threading.Tasks;
 
 namespace Dotnet.Modular.Core
 {
-    public abstract class ModuleBase : IModule, IPreConfigureServices, IPostConfigureServices
+    public abstract class ModuleBase : IModule, IPreConfigureServices, IPostConfigureServices,
+        IOnPreApplicationInitialization,
+        IOnApplicationInitialization,
+        IOnPostApplicationInitialization,
+        IOnApplicationShutdown
     {
         private ServiceConfigurationContext? _serviceConfigurationContext;
 
-        
+
 
         public virtual void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -21,7 +26,7 @@ namespace Dotnet.Modular.Core
 
         public virtual void PostConfigureServices(ServiceConfigurationContext context)
         {
-            
+
         }
 
 
@@ -35,6 +40,46 @@ namespace Dotnet.Modular.Core
             where TOptions : class
         {
             ServiceConfigurationContext.Services.Configure(name, configureOptions);
+        }
+
+        public Task OnPreApplicationInitializationAsync(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnPreApplicationInitialization(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task OnApplicationInitializationAsync(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnApplicationInitialization(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task OnPostApplicationInitializationAsync(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnPostApplicationInitialization(ApplicationInitializationContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task OnApplicationShutdownAsync(ApplicationShutdownContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnApplicationShutdown(ApplicationShutdownContext context)
+        {
+            throw new NotImplementedException();
         }
 
         //protected void Configure<TOptions>(IConfiguration configuration)

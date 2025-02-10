@@ -1,4 +1,6 @@
-﻿namespace Dotnet.Modular.Core
+﻿using System.Threading.Tasks;
+
+namespace Dotnet.Modular.Core
 {
     public interface IModule
     {
