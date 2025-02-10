@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Dotnet.Modular.Core.Abstractions;
 
-public class CrmModuleDescriptor : ICrmModuleDescriptor
+public class CrmModuleDescriptor : IModuleDescriptor
 {
     public Type Type { get; }
 

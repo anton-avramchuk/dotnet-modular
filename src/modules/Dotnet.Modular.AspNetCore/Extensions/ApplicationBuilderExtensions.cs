@@ -1,7 +1,6 @@
-﻿
-using Dotnet.Modular.Core;
+﻿using Dotnet.Modular.Core;
 
-namespace Crm.AspNetCore.Extensions;
+namespace Dotnet.Modular.AspNetCore.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

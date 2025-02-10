@@ -21,7 +21,7 @@ public abstract class CrmApplicationBase : ICrmApplication
 
     public IServiceCollection Services { get; }
 
-    public IReadOnlyList<ICrmModuleDescriptor> Modules { get; }
+    public IReadOnlyList<IModuleDescriptor> Modules { get; }
 
     public string? ApplicationName { get; }
 
@@ -113,7 +113,7 @@ public abstract class CrmApplicationBase : ICrmApplication
         initLogger.Entries.Clear();
     }
 
-    protected virtual IReadOnlyList<ICrmModuleDescriptor> LoadModules(IServiceCollection services, CrmApplicationCreationOptions options)
+    protected virtual IReadOnlyList<IModuleDescriptor> LoadModules(IServiceCollection services, CrmApplicationCreationOptions options)
     {
         return services
             .GetSingletonInstance<IModuleLoader>()

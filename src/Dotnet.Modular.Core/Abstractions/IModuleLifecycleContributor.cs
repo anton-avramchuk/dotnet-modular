@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace Dotnet.Modular.Core.Abstractions;
+﻿namespace Dotnet.Modular.Core.Abstractions;
 
 public interface IModuleLifecycleContributor
 {

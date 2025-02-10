@@ -5,5 +5,5 @@ namespace Dotnet.Modular.Core.Abstractions;
 public interface IModuleContainer
 {
 
-    IReadOnlyList<ICrmModuleDescriptor> Modules { get; }
+    IReadOnlyList<IModuleDescriptor> Modules { get; }
 }

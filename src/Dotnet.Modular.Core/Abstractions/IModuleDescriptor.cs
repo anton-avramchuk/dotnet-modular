@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
 
 namespace Dotnet.Modular.Core.Abstractions;
 
-public interface ICrmModuleDescriptor
+public interface IModuleDescriptor
 {
     /// <summary>
     /// Type of the module class.

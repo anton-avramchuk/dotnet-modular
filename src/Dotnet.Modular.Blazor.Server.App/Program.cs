@@ -1,4 +1,5 @@
 using Dotnet.Modular.Blazor.Server.App;
+using Dotnet.Modular.AspNetCore.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
@@ -19,6 +20,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.InitializeApplication();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");

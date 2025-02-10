@@ -1,4 +1,5 @@
-﻿using Dotnet.Modular.Blazor.Server.App.Services;
+﻿using Dotnet.Modular.AspNetCore;
+using Dotnet.Modular.Blazor.Server.App.Services;
 using Dotnet.Modular.Core;
 using Dotnet.Modular.Modules.Blazor.Layout.Material;
 using Dotnet.Modular.Modules.Navigation;
@@ -11,6 +12,7 @@ namespace Dotnet.Modular.Blazor.Server.App
     [DependsOn(typeof(BlazorLayoutMaterialModule))]
     [DependsOn(typeof(UIModule))]
     [DependsOn(typeof(NavigationModule))]
+    [DependsOn(typeof(AspNetCoreModule))]
     public partial class AppBoostrapper : ModuleBase
     {
         public AppBoostrapper()

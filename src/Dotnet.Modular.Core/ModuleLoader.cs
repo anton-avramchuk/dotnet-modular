@@ -8,7 +8,7 @@ namespace Dotnet.Modular.Core
 {
     public class ModuleLoader : IModuleLoader
     {
-        public ICrmModuleDescriptor[] LoadModules(
+        public IModuleDescriptor[] LoadModules(
             IServiceCollection services,
             Type startupModuleType)
         {

@@ -1,5 +1,4 @@
-﻿using Crm.Core;
-using Crm.Core.DependencyInjection;
+﻿using Dotnet.Modular.Core;
 
 namespace Crm.AspNetCore.Extensions.Application;
 

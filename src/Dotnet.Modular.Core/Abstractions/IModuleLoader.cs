@@ -6,7 +6,7 @@ namespace Dotnet.Modular.Core.Abstractions;
 public interface IModuleLoader
 {
 
-    ICrmModuleDescriptor[] LoadModules(
+    IModuleDescriptor[] LoadModules(
         IServiceCollection services,
         Type startupModuleType
     );
