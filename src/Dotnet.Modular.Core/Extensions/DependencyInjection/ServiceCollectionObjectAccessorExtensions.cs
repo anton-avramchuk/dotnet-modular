@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace Dotnet.Modular.Core.Extensions.DependencyInjection;
 

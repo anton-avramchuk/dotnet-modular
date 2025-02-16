@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using Dotnet.Modular.Core;
 
-namespace Dotnet.Modular.Core;
-
+namespace Dotnet.Modular.Modules.Core;
+[Export(ExportType.Trancient)]
 public class OnApplicationInitializationModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public async override Task InitializeAsync(ApplicationInitializationContext context, IModule module)
@@ -17,7 +17,7 @@ public class OnApplicationInitializationModuleLifecycleContributor : ModuleLifec
         (module as IOnApplicationInitialization)?.OnApplicationInitialization(context);
     }
 }
-
+[Export(ExportType.Trancient)]
 public class OnApplicationShutdownModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public async override Task ShutdownAsync(ApplicationShutdownContext context, IModule module)
@@ -34,6 +34,7 @@ public class OnApplicationShutdownModuleLifecycleContributor : ModuleLifecycleCo
     }
 }
 
+[Export(ExportType.Trancient)]
 public class OnPreApplicationInitializationModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public async override Task InitializeAsync(ApplicationInitializationContext context, IModule module)
@@ -49,7 +50,7 @@ public class OnPreApplicationInitializationModuleLifecycleContributor : ModuleLi
         (module as IOnPreApplicationInitialization)?.OnPreApplicationInitialization(context);
     }
 }
-
+[Export(ExportType.Trancient)]
 public class OnPostApplicationInitializationModuleLifecycleContributor : ModuleLifecycleContributorBase
 {
     public async override Task InitializeAsync(ApplicationInitializationContext context, IModule module)

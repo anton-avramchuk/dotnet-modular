@@ -41,12 +41,6 @@ internal static class InternalServiceCollectionExtensions
 
         //services.AddTransient(typeof(ISimpleStateCheckerManager<>), typeof(SimpleStateCheckerManager<>));
 
-        services.Configure<CrmModuleLifecycleOptions>(options =>
-        {
-            options.Contributors.Add<OnPreApplicationInitializationModuleLifecycleContributor>();
-            options.Contributors.Add<OnApplicationInitializationModuleLifecycleContributor>();
-            options.Contributors.Add<OnPostApplicationInitializationModuleLifecycleContributor>();
-            options.Contributors.Add<OnApplicationShutdownModuleLifecycleContributor>();
-        });
+        
     }
 }

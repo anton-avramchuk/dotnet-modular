@@ -42,64 +42,51 @@ namespace Dotnet.Modular.Core
             ServiceConfigurationContext.Services.Configure(name, configureOptions);
         }
 
-        public Task OnPreApplicationInitializationAsync(ApplicationInitializationContext context)
+        public virtual Task OnPreApplicationInitializationAsync(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+            OnPreApplicationInitialization(context);
+            return Task.CompletedTask;
         }
 
-        public void OnPreApplicationInitialization(ApplicationInitializationContext context)
+        public virtual void OnPreApplicationInitialization(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+
         }
 
-        public Task OnApplicationInitializationAsync(ApplicationInitializationContext context)
+        public virtual Task OnApplicationInitializationAsync(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+            OnApplicationInitialization(context);
+            return Task.CompletedTask;
         }
 
-        public void OnApplicationInitialization(ApplicationInitializationContext context)
+        public virtual void OnApplicationInitialization(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+
         }
 
-        public Task OnPostApplicationInitializationAsync(ApplicationInitializationContext context)
+        public virtual Task OnPostApplicationInitializationAsync(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+            OnPostApplicationInitialization(context);
+            return Task.CompletedTask;
         }
 
-        public void OnPostApplicationInitialization(ApplicationInitializationContext context)
+        public virtual void OnPostApplicationInitialization(ApplicationInitializationContext context)
         {
-            throw new NotImplementedException();
+
         }
 
-        public Task OnApplicationShutdownAsync(ApplicationShutdownContext context)
+        public virtual Task OnApplicationShutdownAsync(ApplicationShutdownContext context)
         {
-            throw new NotImplementedException();
+            OnApplicationShutdown(context);
+            return Task.CompletedTask;
         }
 
-        public void OnApplicationShutdown(ApplicationShutdownContext context)
+        public virtual void OnApplicationShutdown(ApplicationShutdownContext context)
         {
-            throw new NotImplementedException();
+
         }
 
-        //protected void Configure<TOptions>(IConfiguration configuration)
-        //    where TOptions : class
-        //{
-        //    ServiceConfigurationContext.Services.Configure<TOptions>(configuration);
-        //}
-
-        //protected void Configure<TOptions>(IConfiguration configuration, Action<BinderOptions> configureBinder)
-        //    where TOptions : class
-        //{
-        //    ServiceConfigurationContext.Services.Configure<TOptions>(configuration, configureBinder);
-        //}
-
-        //protected void Configure<TOptions>(string name, IConfiguration configuration)
-        //    where TOptions : class
-        //{
-        //    ServiceConfigurationContext.Services.Configure<TOptions>(name, configuration);
-        //}
-
+        
         protected internal ServiceConfigurationContext ServiceConfigurationContext
         {
             get
