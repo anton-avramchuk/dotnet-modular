@@ -15,6 +15,7 @@
 		<ProjectReference Include="..\Dotnet.Modular.Generators.Module\Dotnet.Modular.Generators.Module.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 		<ProjectReference Include="..\Dotnet.Modular.Generators.Application\Dotnet.Modular.Generators.Application.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
 		<ProjectReference Include="..\modules\Dotnet.Modular.AspNetCore\Dotnet.Modular.AspNetCore.csproj" />
+		<ProjectReference Include="..\modules\Dotnet.Modular.Auth\Dotnet.Modular.Auth.csproj" />
 		<ProjectReference Include="..\modules\Dotnet.Modular.Modules.Blazor.Layout.Material\Dotnet.Modular.Modules.Blazor.Layout.Material.csproj" />
 		<ProjectReference Include="..\modules\Dotnet.Modular.Modules.Core\Dotnet.Modular.Modules.Core.csproj" />
 		<ProjectReference Include="..\modules\Dotnet.Modular.Modules.Navigation\Dotnet.Modular.Modules.Navigation.csproj" />

@@ -1,4 +1,6 @@
 ﻿using Dotnet.Modular.AspNetCore;
+using Dotnet.Modular.Auth;
+using Dotnet.Modular.Auth.Extensions;
 using Dotnet.Modular.Blazor.Server.App.Services;
 using Dotnet.Modular.Core;
 using Dotnet.Modular.Modules.Blazor.Layout.Material;
@@ -13,6 +15,7 @@ namespace Dotnet.Modular.Blazor.Server.App
     [DependsOn(typeof(UIModule))]
     [DependsOn(typeof(NavigationModule))]
     [DependsOn(typeof(AspNetCoreModule))]
+    [DependsOn(typeof(AuthModule))]
     public partial class AppBoostrapper : ModuleBase
     {
         public AppBoostrapper()
@@ -22,6 +25,7 @@ namespace Dotnet.Modular.Blazor.Server.App
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             RegisterServices(context.Services);
+            context.Services.AddCookieAuth();
             Configure<NavigationOptions>(options =>
             {
                 options.MenuProviders.Add(new MainMenuProvider());
